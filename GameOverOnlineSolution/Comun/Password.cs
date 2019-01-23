@@ -8,6 +8,7 @@ namespace Comun
 {
     public static class Password
     {
+        #region metodos dde encriptacion de datos
         /// <summary>
         /// Esta funcion encripta la cadena
         /// </summary>
@@ -28,5 +29,6 @@ namespace Comun
             result = System.Text.Encoding.Unicode.GetString(decryted);
             return result;
         }
+        #endregion        
     }
 }
