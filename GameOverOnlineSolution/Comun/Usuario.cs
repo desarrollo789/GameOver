@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Comun
 {
-    class Usuario
+    public class Usuario
     {
         #region atributos
         /// <summary>
         /// Id del Usuario
         /// </summary>
-        public int ClienteId { get; set; }
+        public int UsuarioId { get; set; }
 
         /// <summary>
         /// Nombre del Usuario

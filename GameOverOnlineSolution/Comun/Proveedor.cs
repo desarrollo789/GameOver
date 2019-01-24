@@ -14,7 +14,7 @@ namespace Comun
         /// </summary>
         public int ProveedorId { get; set; }
 
-        /// <summary>
+        /// <summary> 
         /// Correo Electronico del Proveedor
         /// </summary>
         public string CorreoElectronico { get; set; }
