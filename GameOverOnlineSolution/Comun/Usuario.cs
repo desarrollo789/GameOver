@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comun
 {
-    class Cliente
+    class Usuario
     {
         #region atributos
         /// <summary>
@@ -23,9 +23,6 @@ namespace Comun
         /// Apellido del Usuario
         /// </sumary>
         public string Apellido { get; set; }
-        /// <summary>
-        /// Sexo del paciente
-        /// </summary>
 
         /// <summary>
         /// Correo electronico del cliente
@@ -39,9 +36,16 @@ namespace Comun
         public DateTime FechaNacimiento { get; set; }
 
         ///<summary>
-        ///Usuario 
+        /// Nombre de Usuario(username)
         ///</summary>
+        public string Username { get; set; } 
 
+
+        ///<summary>
+        /// Rol de Administrador
+        ///</summary>
+        public bool Admin { get; set; }
+        
         /// <summary>
         /// Recupera la informacion del password mediante in ID del mismo
         /// </summary>
