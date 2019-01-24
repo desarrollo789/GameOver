@@ -43,6 +43,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBrl.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClienteDal\ClienteDal.csproj">
+      <Project>{f7539d65-c642-443e-93d3-c321bc0c3632}</Project>
+      <Name>ClienteDal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comun\Comun.csproj">
+      <Project>{5e7970e0-e3fb-4425-8d4c-7a7ef2711859}</Project>
+      <Name>Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
