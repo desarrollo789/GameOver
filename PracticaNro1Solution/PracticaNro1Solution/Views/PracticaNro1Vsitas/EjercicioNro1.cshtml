@@ -1,0 +1,35 @@
+﻿@model PracticaNro1Solution.Models.EjercicioNro1
+@{
+    ViewBag.Title = "EjercicioNro1";
+}
+
+<h2>EjercicioNro1</h2>
+@using (@Html.BeginForm())
+{
+    @Html.ValidationSummary(true);
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.numero_a)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model =>model.numero_a)
+            @Html.ValidationMessageFor(model => model.numero_a)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.numero_b)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.numero_b)
+            @Html.ValidationMessageFor(model => model.numero_b)
+        </div>
+        <div class="editor-field">
+            @Html.LabelFor(model => model.respuesta)
+            @Html.DisplayFor(model => model.respuesta)
+        </div>
+        <p>
+            <input type="submit" value="Obtener potencia" />
+        </p>
+    </fieldset>
+
+}
+
