@@ -12,7 +12,7 @@ namespace Comun
         /// <summary>
         /// Id del Usuario
         /// </summary>
-        public int ClienteId { get; set; }
+        public int UsuarioId { get; set; }
 
         /// <summary>
         /// Nombre del Usuario
@@ -45,6 +45,11 @@ namespace Comun
         /// Rol de Administrador
         ///</summary>
         public bool Admin { get; set; }
+
+        ///<summary>
+        /// Sexo del Usuario
+        ///</summary>
+        public bool Eliminado { get; set; }
         
         /// <summary>
         /// Recupera la informacion del password mediante in ID del mismo
