@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comun
 {
-    class Usuario
+    public class Usuario
     {
         #region atributos
         /// <summary>
