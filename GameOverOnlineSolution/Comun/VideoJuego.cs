@@ -8,40 +8,41 @@ namespace Comun
 {
     class VideoJuego
     {
-        #region atributos
+        #region
         /// <summary>
-        /// Id del Videojuego
+        /// Identificador del videojuego
         /// </summary>
         public int VideoJuegoId { get; set; }
-
         /// <summary>
-        /// Titulo del Videojuego
+        /// Nombre del videojuego
         /// </summary>
-        public string VideoJuegoNombre { get; set; }
+        public string Nombre { get; set; }
+      
 
         /// <summary>
-        /// Precio del Videojuego
+        /// define el precio de un video juego
         /// </summary>
         public float Precio { get; set; }
 
 
         /// <summary>
-        /// Portada del Videojuego
+        /// define la portada del juego
         /// </summary>
         
-        public string Portada { get; set; }
-
+        public string Protada { get; set; }
 
         /// <summary>
-        /// Trailer del Videojuego
+        /// define la portada del juego
         /// </summary>
+
         public string Trailer { get; set; }
-
-        ///<summary>
-        ///Detalles Tecnicos del Vieojuego
-        ///</summary>
-        public string DetalleTecnico { get; set; }
-
+        /// <summary>
+        /// define la trailer del juego
+        /// </summary>
+        
+        public bool Eliminado { get; set; }
         #endregion
+
+
     }
 }
