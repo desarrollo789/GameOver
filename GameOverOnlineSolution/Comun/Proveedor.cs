@@ -30,6 +30,11 @@ namespace Comun
         /// </summary>
 
         public string ApellidoProveedor { get; set; }
+
+        ///<summary>
+        /// Eliminado Logico del Proveedor
+        ///</summary>
+        public bool Eliminado { get; set; }
         #endregion
     }
 }
