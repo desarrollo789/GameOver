@@ -144,7 +144,7 @@ namespace ClienteDal
             }
             catch (Exception ex)
             {
-                Methods.GenerateLogsRelease("PacienteDal", "Obteber", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
+                Methods.GenerateLogsRelease("UsuarioDal", "Obteber", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
                 throw ex;
             }
             finally

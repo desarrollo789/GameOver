@@ -1,44 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using Comun;
-
 namespace ClienteDal
 {
-    /// <summary>
-    /// Clase sexo para acceder a la base de datos
-    /// </summary>
-    class SexoDal
+    public class SexoListDal
     {
         /// <summary>
-        /// Obtener un sexo
+        /// Obtener un listan de sexos
         /// </summary>
-        /// <param name="id">Identificador del sexo</param>
         /// <returns></returns>
-        public static Sexo Get(byte id)
+        public static SexoList Get()
         {
-            Sexo res = new Sexo();
+            SexoList res = new SexoList();
             SqlCommand cmd = null;
             SqlDataReader dr = null;
-            string query = "Select * From Sexos where SexoId = @id";
+            string query = "SELECT SexoId, Nombre FROM Sexos";
             try
             {
                 cmd = Methods.CreateBasicCommand(query);
-                cmd.Parameters.AddWithValue("@id", id);
                 dr = Methods.ExecuteDataReaderCommand(cmd);
 
                 while (dr.Read())
                 {
-                    res = new Sexo()
+                    res.Add(new Sexo()
                     {
                         SexoId = dr.GetByte(0),
                         Nombre = dr.GetString(1)
-                    };
+                    });
                 }
             }
             catch (Exception ex)
             {
-                Methods.GenerateLogsRelease("SexoDal", "Obtener", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
+                Methods.GenerateLogsRelease("SexoListDal", "Obteber", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
                 throw ex;
             }
             finally
