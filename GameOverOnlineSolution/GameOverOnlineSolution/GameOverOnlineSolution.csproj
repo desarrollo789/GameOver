@@ -137,6 +137,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ComentarioModel.cs" />
     <Compile Include="Models\ProveedorModel.cs" />
     <Compile Include="Models\VideojuegoModel.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
