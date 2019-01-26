@@ -45,8 +45,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SexoDal.cs" />
     <Compile Include="SexoListDal.cs" />
-    <Compile Include="TiendaDal.cs" />
     <Compile Include="UsuarioDal.cs" />
+    <Compile Include="VideoJuegoDal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Comun\Comun.csproj">
