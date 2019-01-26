@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compra.cs" />
+    <Compile Include="Sexo.cs" />
+    <Compile Include="SexoList.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="NotaVenta.cs" />
     <Compile Include="Password.cs" />
