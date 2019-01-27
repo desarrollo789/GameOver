@@ -8,7 +8,7 @@ namespace ClienteDal
     /// <summary>
     /// Clase que nos parmite interactuar con la base de datos de clite
     /// </summary>
-    class UsuarioDal
+    public class UsuarioDal
     {
         /// <summary>
         /// Metodo que sirve para insertar a la base de datos
@@ -82,7 +82,7 @@ namespace ClienteDal
         /// Actualiza los datos del paciente en la base de datos
         /// </summary>
         /// <param name="usuario"></param>
-        public static void Actulizar(Usuario usuario)
+        public static void Actualizar(Usuario usuario)
         {
             Methods.GenerateLogsDebug("UsuarioDal", "Actualizar", string.Format("{0} Info: {1}", DateTime.Now.ToLongDateString(), "Empezando a ejecutar el metodo acceso a datos para Actualizar un usuario"));
 
