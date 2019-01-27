@@ -118,69 +118,69 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Birthdate" xml:space="preserve">
-    <value>Birthdate</value>
+    <value>Fecha de Nacimiento</value>
   </data>
   <data name="CommentMessageError" xml:space="preserve">
-    <value>The {0} must be at least {2} characters long.</value>
+    <value>El {0} debe ser de por lo menos {2} caracteres.</value>
   </data>
   <data name="CommentText" xml:space="preserve">
-    <value>Comment</value>
+    <value>Comentario</value>
   </data>
   <data name="EmailProvider" xml:space="preserve">
-    <value>Email of the Provider</value>
+    <value>Correo Electronico del Proveedor</value>
   </data>
   <data name="EmailProviderMessageError" xml:space="preserve">
-    <value>You must insert a valid E-mail</value>
+    <value>Debe insertar un Correo Electrinico Valido.</value>
   </data>
   <data name="EmailUser" xml:space="preserve">
-    <value>User Email</value>
+    <value>Correo Electronico</value>
   </data>
   <data name="EmailUserMessageError" xml:space="preserve">
-    <value>You must insert a valid E-mail</value>
+    <value>Debe insertar un Correo Electronico Valido. </value>
   </data>
   <data name="FieldRequired" xml:space="preserve">
-    <value>Field Required</value>
+    <value>Campo Requerido</value>
   </data>
   <data name="FirstName" xml:space="preserve">
-    <value>Firstname</value>
+    <value>Nombre</value>
   </data>
   <data name="FirstNameMessageError" xml:space="preserve">
-    <value>The {0} must be at least {2} characters long.</value>
+    <value>El {0} debe ser de por lo menos {2} caracteres.</value>
   </data>
   <data name="FirstNameProvider" xml:space="preserve">
-    <value>Firstname of the Provider</value>
+    <value>Nombre del Proveedor</value>
   </data>
   <data name="FirstNameProviderMessageError" xml:space="preserve">
-    <value>The {0} must be at least {2} characters long.</value>
+    <value>El {0} debe ser de por lo menos {2} caracteres.</value>
   </data>
   <data name="GameName" xml:space="preserve">
-    <value>Game Name</value>
+    <value>Nombre del Videojuego</value>
   </data>
   <data name="GamePortrait" xml:space="preserve">
-    <value>Game Portrait</value>
+    <value>Portada del Videojuego</value>
   </data>
   <data name="GamePrice" xml:space="preserve">
-    <value>Game Price</value>
+    <value>Precio del Videojuego</value>
   </data>
   <data name="GameTrailer" xml:space="preserve">
-    <value>GameTrailer</value>
+    <value>Trailer del Videojuego</value>
   </data>
   <data name="LastName" xml:space="preserve">
-    <value>Lastname</value>
+    <value>Apellidos</value>
   </data>
   <data name="LastNameProvider" xml:space="preserve">
-    <value>Lastname</value>
+    <value>Apellidos</value>
   </data>
   <data name="LastNameProviderMessageError" xml:space="preserve">
-    <value>The {0} must be at least {2} characters long.</value>
+    <value>El {0} debe ser de por lo menos {2} caracteres.</value>
   </data>
   <data name="LastNamerMessageError" xml:space="preserve">
-    <value>The {0} must be at least {2} characters long.</value>
+    <value>El {0} debe ser de por lo menos {2} caracteres.</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>Username</value>
+    <value>Nombre de Usuario</value>
   </data>
   <data name="UsernameMessageError" xml:space="preserve">
-    <value>The {0} must be at least {2} characters long.</value>
+    <value>El {0} debe ser de por lo menos {2} caracteres.</value>
   </data>
 </root>
