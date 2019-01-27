@@ -23,12 +23,12 @@ namespace ClienteDal
             try
             {
                 command = Methods.CreateBasicCommand(queryString);
-                command.Parameters.AddWithValue("@nombre", paciente.Nombre);
-                command.Parameters.AddWithValue("@apellido", paciente.Apellido);
-                command.Parameters.AddWithValue("@pacienteId", paciente.PacienteId);
-                command.Parameters.AddWithValue("@sexoId", paciente.Sexo.SexoId);
-                command.Parameters.AddWithValue("@fechaNacimiento", paciente.FechaNacimiento);
-                command.Parameters.AddWithValue("@eliminado", 0);
+                command.Parameters.AddWithValue("@nombre", videojuego.Nombre);
+                command.Parameters.AddWithValue("@precioId", videojuego.Precio);
+                command.Parameters.AddWithValue("@videojuegoId", videojuego.VideoJuegoId);
+                command.Parameters.AddWithValue("@portada",videojuego.Protada);
+                command.Parameters.AddWithValue("@trailer", videojuego.Trailer);
+                command.Parameters.AddWithValue("@eliminado", videojuego.Eliminado);
                 Methods.ExecuteBasicCommand(command);
             }
             catch (SqlException ex)
@@ -38,11 +38,11 @@ namespace ClienteDal
             }
             catch (Exception ex)
             {
-                Methods.GenerateLogsRelease("PacienteDal", "Insertar", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
+                Methods.GenerateLogsRelease("VideoJuegoDal", "Insertar", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
                 throw ex;
             }
 
-            Methods.GenerateLogsDebug("PacienteDal", "Insertar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para insertar un paciente"));
+            Methods.GenerateLogsDebug("VideoJuegoDal", "Insertar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para insertar un paciente"));
         }
         /// <summary>
         /// Eliminar VideoJuego
@@ -50,7 +50,7 @@ namespace ClienteDal
         /// <param name="id">Identificador del videojuego</param>
         public static void Eliminar(int id)
         {
-            Methods.GenerateLogsDebug("PacienteDal", "Eliminar", string.Format("{0} Info: {1}", DateTime.Now.ToLongDateString(), "Empezando a ejecutar el metodo acceso a datos para eliminar un paciente"));
+            Methods.GenerateLogsDebug("VideoJuegoDal", "Eliminar", string.Format("{0} Info: {1}", DateTime.Now.ToLongDateString(), "Empezando a ejecutar el metodo acceso a datos para eliminar un paciente"));
 
             SqlCommand command = null;
 
@@ -87,16 +87,17 @@ namespace ClienteDal
             SqlCommand command = null;
 
             // Proporcionar la cadena de consulta 
-            string queryString = @"UPDATE PACIENTES SET Nombre=@nombre, Apellido=@apellido, SexoId=@sexoId, fechaNacimiento=@fechaNacimiento, Eliminado= @eliminado Where PacienteId=@pacienteId";
+            string queryString = @"UPDATE VIDEOJUEGO SET Nombre=@nombre, Apellido=@apellido, SexoId=@sexoId, fechaNacimiento=@fechaNacimiento, Eliminado= @eliminado Where PacienteId=@pacienteId";
             try
             {
                 command = Methods.CreateBasicCommand(queryString);
-                command.Parameters.AddWithValue("@pacienteId", paciente.PacienteId);
-                command.Parameters.AddWithValue("@nombre", paciente.Nombre);
-                command.Parameters.AddWithValue("@apellido", paciente.Apellido);
-                command.Parameters.AddWithValue("@sexoId", paciente.Sexo.SexoId);
-                command.Parameters.AddWithValue("@fechaNacimiento", paciente.FechaNacimiento);
-                command.Parameters.AddWithValue("@eliminado", paciente.Eliminado);
+                command = Methods.CreateBasicCommand(queryString);
+                command.Parameters.AddWithValue("@nombre", videojuego.Nombre);
+                command.Parameters.AddWithValue("@precioId", videojuego.Precio);
+                command.Parameters.AddWithValue("@videojuegoId", videojuego.VideoJuegoId);
+                command.Parameters.AddWithValue("@portada", videojuego.Protada);
+                command.Parameters.AddWithValue("@trailer", videojuego.Trailer);
+                command.Parameters.AddWithValue("@eliminado", videojuego.Eliminado);
                 Methods.ExecuteBasicCommand(command);
             }
             catch (SqlException ex)

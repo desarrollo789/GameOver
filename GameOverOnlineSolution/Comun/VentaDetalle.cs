@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Comun
 {
-    class NotaVenta
+    class VentaDetalle
     {
         #region atributos
         /// <summary>
-        /// Identificador de NotaVenta
+        /// Identificador de VentaDetalle
         /// </summary>
-        public string NotaVentaId { get; set; }
+        public string VentaDetalleId { get; set; }
         /// <summary>
-        /// 
+        /// Detalle de las ventas realizados
         /// </summary>
-
+        public string VDetalle { get; set; }
         #endregion
     }
 }
