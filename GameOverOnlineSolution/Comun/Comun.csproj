@@ -41,10 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compra.cs" />
+    <Compile Include="Ranking.cs" />
     <Compile Include="Sexo.cs" />
     <Compile Include="SexoList.cs" />
     <Compile Include="Usuario.cs" />
-    <Compile Include="NotaVenta.cs" />
+    <Compile Include="VentaDetalle.cs" />
     <Compile Include="Password.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor.cs" />
