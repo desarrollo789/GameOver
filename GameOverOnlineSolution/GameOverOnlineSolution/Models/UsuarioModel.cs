@@ -39,19 +39,20 @@ namespace GameOverOnlineSolution.Models
             get;
             set;
         }
-        
-        [Display(Name = "Sex")]
-        [StringLenght(50, ErrorMessageResourceName = "FirstNameMessageError", MinimumLenght = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
-        public int Nombre
-        {
-            get;
-            set;
-        }
 
         [Display(Name = "Birthdate", ResourceType = typeof(Resource.Resource))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode= true)]
         public DateTime? FechaNacimiento
+        {
+            get;
+            set;
+        }
+
+        [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Resource.Resource))]
+        [Display(Name = "Username")]
+        [StringLenght(50, ErrorMessageResourceName = "UserNameMessageError", MinimumLenght = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
+        public string Usuario
         {
             get;
             set;

@@ -8,7 +8,7 @@ namespace GameOverOnlineSolution.Models
 {
     public class VideojuegoModel
     {
-        [Display(Name = "ID")]
+        [Display(Name = "VideojuegoId")]
         public int VideojuegoId
         {
             get;
@@ -47,5 +47,13 @@ namespace GameOverOnlineSolution.Models
             get;
             set;
         }
+
+        public bool Eliminado
+        {
+            get;
+            set;
+        }
+
+
     }
 }

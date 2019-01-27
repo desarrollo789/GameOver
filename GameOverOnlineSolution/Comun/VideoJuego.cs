@@ -29,7 +29,7 @@ namespace Comun
         /// define la portada del juego
         /// </summary>
         
-        public string Protada { get; set; }
+        public string Portada { get; set; }
 
         /// <summary>
         /// define la portada del juego
