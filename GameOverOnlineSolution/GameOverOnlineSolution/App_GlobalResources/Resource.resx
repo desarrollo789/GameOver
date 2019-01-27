@@ -120,4 +120,13 @@
   <data name="FieldRequired" xml:space="preserve">
     <value>Field Required</value>
   </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Firstname</value>
+  </data>
+  <data name="FirstNameMessageError" xml:space="preserve">
+    <value>The {0} must be at least {2} characters long.</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>LastName</value>
+  </data>
 </root>

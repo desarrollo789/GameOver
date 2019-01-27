@@ -61,11 +61,200 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Birthdate.
+        /// </summary>
+        internal static string Birthdate {
+            get {
+                return ResourceManager.GetString("Birthdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} must be at least {2} characters long..
+        /// </summary>
+        internal static string CommentMessageError {
+            get {
+                return ResourceManager.GetString("CommentMessageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comment.
+        /// </summary>
+        internal static string CommentText {
+            get {
+                return ResourceManager.GetString("CommentText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email of the Provider.
+        /// </summary>
+        internal static string EmailProvider {
+            get {
+                return ResourceManager.GetString("EmailProvider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must insert a valid E-mail.
+        /// </summary>
+        internal static string EmailProviderMessageError {
+            get {
+                return ResourceManager.GetString("EmailProviderMessageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Email.
+        /// </summary>
+        internal static string EmailUser {
+            get {
+                return ResourceManager.GetString("EmailUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must insert a valid E-mail.
+        /// </summary>
+        internal static string EmailUserMessageError {
+            get {
+                return ResourceManager.GetString("EmailUserMessageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Field Required.
         /// </summary>
         internal static string FieldRequired {
             get {
                 return ResourceManager.GetString("FieldRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Firstname.
+        /// </summary>
+        internal static string FirstName {
+            get {
+                return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} must be at least {2} characters long..
+        /// </summary>
+        internal static string FirstNameMessageError {
+            get {
+                return ResourceManager.GetString("FirstNameMessageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Firstname of the Provider.
+        /// </summary>
+        internal static string FirstNameProvider {
+            get {
+                return ResourceManager.GetString("FirstNameProvider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} must be at least {2} characters long..
+        /// </summary>
+        internal static string FirstNameProviderMessageError {
+            get {
+                return ResourceManager.GetString("FirstNameProviderMessageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game Name.
+        /// </summary>
+        internal static string GameName {
+            get {
+                return ResourceManager.GetString("GameName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game Portrait.
+        /// </summary>
+        internal static string GamePortrait {
+            get {
+                return ResourceManager.GetString("GamePortrait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game Price.
+        /// </summary>
+        internal static string GamePrice {
+            get {
+                return ResourceManager.GetString("GamePrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GameTrailer.
+        /// </summary>
+        internal static string GameTrailer {
+            get {
+                return ResourceManager.GetString("GameTrailer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lastname.
+        /// </summary>
+        internal static string LastName {
+            get {
+                return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lastname.
+        /// </summary>
+        internal static string LastNameProvider {
+            get {
+                return ResourceManager.GetString("LastNameProvider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} must be at least {2} characters long..
+        /// </summary>
+        internal static string LastNameProviderMessageError {
+            get {
+                return ResourceManager.GetString("LastNameProviderMessageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} must be at least {2} characters long..
+        /// </summary>
+        internal static string LastNamerMessageError {
+            get {
+                return ResourceManager.GetString("LastNamerMessageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        internal static string Username {
+            get {
+                return ResourceManager.GetString("Username", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} must be at least {2} characters long..
+        /// </summary>
+        internal static string UsernameMessageError {
+            get {
+                return ResourceManager.GetString("UsernameMessageError", resourceCulture);
             }
         }
     }

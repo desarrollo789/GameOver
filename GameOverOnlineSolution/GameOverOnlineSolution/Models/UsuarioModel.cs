@@ -24,7 +24,7 @@ namespace GameOverOnlineSolution.Models
         [Required(ErrorMessageResourceName="FieldRequired", ErrorMessageResourceType= typeof(Resource.Resource))]
         [Display(Name = "FirstName")]
         [StringLenght(50,ErrorMessageResourceName="FirstNameMessageError",MinimumLenght=3,ErrorMessageResourceType=typeof(Resource.Resource))]
-        public int Nombre
+        public string Nombre
         {
             get;
             set;
@@ -34,7 +34,16 @@ namespace GameOverOnlineSolution.Models
         [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Resource.Resource))]
         [Display(Name = "LastName", ResourceType = typeof(Resource.Resource))]
         [StringLenght(50, ErrorMessageResourceName = "LastNameMessageError", MinimumLenght = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
-        public int Nombre
+        public string Apellido
+        {
+            get;
+            set;
+        }
+
+        [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Resource.Resource))]
+        [Display(Name = "EmailUser", ResourceType = typeof(Resource.Resource))]
+        [StringLenght(50, ErrorMessageResourceName = "EmailUserMessageError", MinimumLenght = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
+        public string CorreoElectronico
         {
             get;
             set;
