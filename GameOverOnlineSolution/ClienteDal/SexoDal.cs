@@ -8,7 +8,7 @@ namespace ClienteDal
     /// <summary>
     /// Clase sexo para acceder a la base de datos
     /// </summary>
-    class SexoDal
+    public class SexoDal
     {
         /// <summary>
         /// Obtener un sexo
