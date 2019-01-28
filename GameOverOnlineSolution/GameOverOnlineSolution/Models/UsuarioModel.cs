@@ -10,7 +10,7 @@ namespace GameOverOnlineSolution.Models
     {
         #region Propiedades
         /// <summary>
-        /// Codigo
+        /// Recuperacion del codigo dentro del modulo
         /// </summary>
         
         [Display(Name = "UserId")]
@@ -23,7 +23,7 @@ namespace GameOverOnlineSolution.Models
 
         [Required(ErrorMessageResourceName="FieldRequired", ErrorMessageResourceType= typeof(Resource.Resource))]
         [Display(Name = "FirstName")]
-        [StringLenght(50,ErrorMessageResourceName="FirstNameMessageError",MinimumLenght=3,ErrorMessageResourceType=typeof(Resource.Resource))]
+        [StringLength(50, ErrorMessageResourceName = "FirstNameMessageError", MinimumLength = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
         public string Nombre
         {
             get;
@@ -33,7 +33,7 @@ namespace GameOverOnlineSolution.Models
 
         [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Resource.Resource))]
         [Display(Name = "LastName", ResourceType = typeof(Resource.Resource))]
-        [StringLenght(50, ErrorMessageResourceName = "LastNameMessageError", MinimumLenght = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
+        [StringLength(50, ErrorMessageResourceName = "FirstNameMessageError", MinimumLength = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
         public string Apellido
         {
             get;
@@ -42,7 +42,7 @@ namespace GameOverOnlineSolution.Models
 
         [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Resource.Resource))]
         [Display(Name = "EmailUser", ResourceType = typeof(Resource.Resource))]
-        [StringLenght(50, ErrorMessageResourceName = "EmailUserMessageError", MinimumLenght = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
+        [StringLength(50, ErrorMessageResourceName = "EmailUserMessageError", MinimumLength = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
         public string CorreoElectronico
         {
             get;
@@ -60,7 +60,7 @@ namespace GameOverOnlineSolution.Models
 
         [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Resource.Resource))]
         [Display(Name = "Username")]
-        [StringLenght(50, ErrorMessageResourceName = "UserNameMessageError", MinimumLenght = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
+        [StringLength(50, ErrorMessageResourceName = "UserNameMessageError", MinimumLength = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
         public string Usuario
         {
             get;
