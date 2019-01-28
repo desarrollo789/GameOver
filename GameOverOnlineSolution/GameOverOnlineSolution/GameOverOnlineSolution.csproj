@@ -142,6 +142,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Models\ComentarioModel.cs" />
     <Compile Include="Models\ProveedorModel.cs" />
     <Compile Include="Models\VideojuegoModel.cs" />
@@ -166,7 +167,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\ClienteBrl\ClienteBrl.csproj">
+      <Project>{42f679bd-54b8-4b71-af76-ae20fd17211c}</Project>
+      <Name>ClienteBrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comun\Comun.csproj">
+      <Project>{5e7970e0-e3fb-4425-8d4c-7a7ef2711859}</Project>
+      <Name>Comun</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Resource.resx">
