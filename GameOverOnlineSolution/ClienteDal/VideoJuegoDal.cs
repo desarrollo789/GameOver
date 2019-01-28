@@ -26,7 +26,7 @@ namespace ClienteDal
                 command.Parameters.AddWithValue("@nombre", videojuego.Nombre);
                 command.Parameters.AddWithValue("@precioId", videojuego.Precio);
                 command.Parameters.AddWithValue("@videojuegoId", videojuego.VideoJuegoId);
-                command.Parameters.AddWithValue("@portada",videojuego.Protada);
+                command.Parameters.AddWithValue("@portada",videojuego.Portada);
                 command.Parameters.AddWithValue("@trailer", videojuego.Trailer);
                 command.Parameters.AddWithValue("@eliminado", videojuego.Eliminado);
                 Methods.ExecuteBasicCommand(command);
@@ -95,7 +95,7 @@ namespace ClienteDal
                 command.Parameters.AddWithValue("@nombre", videojuego.Nombre);
                 command.Parameters.AddWithValue("@precioId", videojuego.Precio);
                 command.Parameters.AddWithValue("@videojuegoId", videojuego.VideoJuegoId);
-                command.Parameters.AddWithValue("@portada", videojuego.Protada);
+                command.Parameters.AddWithValue("@portada", videojuego.Portada);
                 command.Parameters.AddWithValue("@trailer", videojuego.Trailer);
                 command.Parameters.AddWithValue("@eliminado", videojuego.Eliminado);
                 Methods.ExecuteBasicCommand(command);
@@ -124,7 +124,7 @@ namespace ClienteDal
             VideoJuego res = new VideoJuego();
             SqlCommand cmd = null;
             SqlDataReader dr = null;
-            string query = "Select * From Pacientes where PacienteId = @id"
+            string query = "Select * From Pacientes where PacienteId = @id";
                 try
             {
                 cmd = Methods.CreateBasicCommand(query);
