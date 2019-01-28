@@ -13,6 +13,8 @@ namespace GameOverOnlineSolution.Controllers
         {
             return View();
         }
+        // post /usuario/create
+        [HttpPost]
         public ActionResult Crear(UsuarioModel model)
         {
             Guid id = Guid.NewGuid();
