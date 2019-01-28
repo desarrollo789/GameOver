@@ -17,9 +17,9 @@ namespace ClienteDal
 
             SqlCommand command = null;
             // Proporcionar la cadena de consulta 
-            string queryString = @"INSERT INTO PACIENTES(PacienteId,Nombre,Apellido,SexoId,FechaNacimiento,Eliminado)
+            string queryString = @"INSERT INTO PACIENTES(PacienteId,Nombre,Apellido,SexoId,FechaNacimiento,Eliminado,Precio)
                                     VALUES
-                                   (@pacienteId, @nombre, @apellido, @sexoId, @fechaNacimiento, @eliminado)";
+                                   (@pacienteId, @nombre, @apellido, @sexoId, @fechaNacimiento, @eliminado, @precioId)";
             try
             {
                 command = Methods.CreateBasicCommand(queryString);
@@ -87,7 +87,7 @@ namespace ClienteDal
             SqlCommand command = null;
 
             // Proporcionar la cadena de consulta 
-            string queryString = @"UPDATE VIDEOJUEGO SET Nombre=@nombre, Apellido=@apellido, SexoId=@sexoId, fechaNacimiento=@fechaNacimiento, Eliminado= @eliminado Where PacienteId=@pacienteId";
+            string queryString = @"UPDATE VIDEOJUEGO SET Nombre=@nombre, Apellido=@apellido, SexoId=@sexoId, fechaNacimiento=@fechaNacimiento, Eliminado= @eliminado, Precio= @precioId Where PacienteId=@pacienteId";
             try
             {
                 command = Methods.CreateBasicCommand(queryString);
@@ -133,7 +133,7 @@ namespace ClienteDal
             }
             catch (Exception ex)
             {
-                Methods.GenerateLogsRelease("VideoJuegoDal", "Obteber", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
+                Methods.GenerateLogsRelease("VideoJuegoDal", "Obtener", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
                 throw ex;
             }
             finally
