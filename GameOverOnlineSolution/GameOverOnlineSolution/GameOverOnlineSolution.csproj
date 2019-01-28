@@ -145,7 +145,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Controllers\SexoListController.cs" />
+    <Compile Include="Controllers\ComentarioController.cs" />
+    <Compile Include="Controllers\CompraController.cs" />
+    <Compile Include="Controllers\ProveedorController.cs" />
+    <Compile Include="Controllers\RankingController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\VentaController.cs" />
+    <Compile Include="Controllers\VentaDetalleController.cs" />
+    <Compile Include="Controllers\VideoJuegoController.cs" />
     <Compile Include="Models\ComentarioModel.cs" />
     <Compile Include="Models\PasswordModel.cs" />
     <Compile Include="Models\ProveedorModel.cs" />
