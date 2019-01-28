@@ -147,6 +147,7 @@
     <Compile Include="Controllers\SexoListController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Models\ComentarioModel.cs" />
+    <Compile Include="Models\PasswordModel.cs" />
     <Compile Include="Models\ProveedorModel.cs" />
     <Compile Include="Models\RankingModel.cs" />
     <Compile Include="Models\SexoModel.cs" />
