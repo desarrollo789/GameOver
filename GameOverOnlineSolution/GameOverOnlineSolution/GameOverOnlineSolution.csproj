@@ -153,7 +153,6 @@
     <Compile Include="Controllers\VentaController.cs" />
     <Compile Include="Controllers\VentaDetalleController.cs" />
     <Compile Include="Controllers\VideoJuegoController.cs" />
-    <Compile Include="Controllers\VideoJuegoController.cs" />
     <Compile Include="Models\ComentarioModel.cs" />
     <Compile Include="Models\PasswordModel.cs" />
     <Compile Include="Models\ProveedorModel.cs" />
