@@ -60,8 +60,17 @@ namespace Comun
         /// </summary>
         public Sexo Sexo { get; set; }
 
+        ///<summary>
+        ///Comentario del Usuario
+        ///</summary>
 
+        public Comentario Comentario { get; set; }
 
+        ///<summary>
+        ///Ranking del Usuario
+        ///</summary>
+        
+        public Ranking Ranking { get; set; }
         #endregion
     }
 }
