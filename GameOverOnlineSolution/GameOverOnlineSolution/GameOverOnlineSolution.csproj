@@ -144,6 +144,7 @@
       <DependentUpon>Resource.resx</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Controllers\SexoController.cs" />
     <Compile Include="Controllers\SexoListController.cs" />
     <Compile Include="Controllers\ComentarioController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
