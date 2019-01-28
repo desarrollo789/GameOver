@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClienteDal", "ClienteDal\Cl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{BA6FA453-495E-4C9C-BFFA-E51379124C73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplicationGameOver", "ConsoleApplicationGameOver\ConsoleApplicationGameOver.csproj", "{D4C2B897-7DE7-4F65-8650-97D1D21E454F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{F7539D65-C642-443E-93D3-C321BC0C3632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7539D65-C642-443E-93D3-C321BC0C3632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7539D65-C642-443E-93D3-C321BC0C3632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C2B897-7DE7-4F65-8650-97D1D21E454F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C2B897-7DE7-4F65-8650-97D1D21E454F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C2B897-7DE7-4F65-8650-97D1D21E454F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C2B897-7DE7-4F65-8650-97D1D21E454F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,5 +55,6 @@ Global
 		{42F679BD-54B8-4B71-AF76-AE20FD17211C} = {44E89DCD-CD60-4577-8B11-38D44A60302C}
 		{5E7970E0-E3FB-4425-8D4C-7A7EF2711859} = {2AFBDE6B-6211-4176-AB1D-C7E5213B8E05}
 		{F7539D65-C642-443E-93D3-C321BC0C3632} = {395313F4-F3F7-43C8-AAA6-B1FEFB043313}
+		{D4C2B897-7DE7-4F65-8650-97D1D21E454F} = {BA6FA453-495E-4C9C-BFFA-E51379124C73}
 	EndGlobalSection
 EndGlobal
