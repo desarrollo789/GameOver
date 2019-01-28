@@ -8,7 +8,7 @@ namespace Comun
 {
     public class VideoJuego
     {
-        #region
+        #region Atributos
         /// <summary>
         /// Identificador del videojuego
         /// </summary>
@@ -41,6 +41,24 @@ namespace Comun
         /// </summary>
         
         public bool Eliminado { get; set; }
+
+        /// <summary>
+        /// Rankin del Juego
+        /// </summary>
+        
+        public Ranking Rankin { get; set; }
+
+        ///<summary>
+        ///Categoria del Videojuego
+        ///</summary>
+        
+        public Categoria Categoria { get; set; }
+
+        ///<summary>
+        ///Comentario del Videojuego
+        ///</summary>
+        
+        public Comentario Comentario { get; set; }
         #endregion
 
 
