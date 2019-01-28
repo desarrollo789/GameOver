@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using GameOverOnlineSolution.Controllers;
-using GameOverOnlineSolution.Comun;
+using Comun;
+using GameOverOnlineSolution.Models;
+using ClienteBrl;
 
 namespace GameOverOnlineSolution.Controllers
 {
-    public class UsuarioController : Controllers
+    public class UsuarioController : Controller
     {
         public ActionResult Index()
         {
@@ -25,12 +28,11 @@ namespace GameOverOnlineSolution.Controllers
                     Apellido = model.Apellido,
                     CorreoElectronico = model.CorreoElectronico,
                     FechaNacimiento = model.FechaNacimiento.Value,
-                    Username = model.Username,
+                    Username = model.Usuario,
                     Admin = false,
                     Eliminado = false,
-                    Sexo = new Sexo() { SexoId = model.Sexo.SexoId },
                 };
-                ClienteBrl.Insertar(usuario);
+                UsuarioBrl.Insertar(usuario);
                 return RedirectToAction("");
             }
             catch
