@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBrl.cs" />
+    <Compile Include="VideoJuegoBrl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClienteDal\ClienteDal.csproj">
