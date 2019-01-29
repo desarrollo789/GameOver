@@ -49,6 +49,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClienteBrl\ClienteBrl.csproj">
+      <Project>{42f679bd-54b8-4b71-af76-ae20fd17211c}</Project>
+      <Name>ClienteBrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClienteDal\ClienteDal.csproj">
+      <Project>{f7539d65-c642-443e-93d3-c321bc0c3632}</Project>
+      <Name>ClienteDal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comun\Comun.csproj">
+      <Project>{5e7970e0-e3fb-4425-8d4c-7a7ef2711859}</Project>
+      <Name>Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameOverOnlineSolution\GameOverOnlineSolution.csproj">
+      <Project>{fff50a84-4fd2-4323-9172-aa121affd66d}</Project>
+      <Name>GameOverOnlineSolution</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

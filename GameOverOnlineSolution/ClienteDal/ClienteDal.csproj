@@ -46,6 +46,7 @@
     <Compile Include="SexoDal.cs" />
     <Compile Include="SexoListDal.cs" />
     <Compile Include="UsuarioDal.cs" />
+    <Compile Include="UsuarioListDal.cs" />
     <Compile Include="VideoJuegoDal.cs" />
   </ItemGroup>
   <ItemGroup>

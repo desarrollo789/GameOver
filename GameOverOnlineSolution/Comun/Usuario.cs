@@ -71,6 +71,12 @@ namespace Comun
         ///</summary>
         
         public Ranking Ranking { get; set; }
+
+        ///<summary>
+        ///Fecha de registro
+        ///</summary>
+        
+
         #endregion
     }
 }
