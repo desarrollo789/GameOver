@@ -1,0 +1,51 @@
+﻿@model GameOverOnlineSolution.Models.UsuarioModel
+@{
+    ViewBag.Title = "View";
+    Layout = null;
+}
+
+<h2>@Resources.Resource.ViewPatient</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Nombre, new { @readonly = "readonly" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Apellido)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Apellido, new { @readonly = "readonly" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Sexo)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Sexo.Nombre, new { @readonly = "readonly" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FechaNacimiento)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.FechaNacimiento, new { @readonly = "readonly" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Username)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Username, new { @readonly = "readonly"})
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Volver atras", "../KeyValueUsuarioList/Index")
+</div>
+
+

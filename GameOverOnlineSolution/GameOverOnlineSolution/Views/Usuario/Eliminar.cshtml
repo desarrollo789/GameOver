@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resource.Resource.DeleteUser</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            @Resources.Resource.MessageDelete
+        </div>
+        <p>
+            <input type="submit" value=@Resource.Resource.Delete />
+        </p>
+        <p>
+            @Html.ActionLink("Volver atras", "../KeyValueUsuarioList/Index")
+        </p>
+    </fieldset>
+}

@@ -144,6 +144,7 @@
       <DependentUpon>Resource.resx</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Controllers\KeyValueUsuarioListController.cs" />
     <Compile Include="Controllers\SexoController.cs" />
     <Compile Include="Controllers\SexoListController.cs" />
     <Compile Include="Controllers\ComentarioController.cs" />
@@ -155,6 +156,8 @@
     <Compile Include="Controllers\VentaDetalleController.cs" />
     <Compile Include="Controllers\VideoJuegoController.cs" />
     <Compile Include="Models\ComentarioModel.cs" />
+    <Compile Include="Models\KeyValueUsuarioListModel.cs" />
+    <Compile Include="Models\KeyValueUsuarioModel.cs" />
     <Compile Include="Models\PasswordModel.cs" />
     <Compile Include="Models\ProveedorModel.cs" />
     <Compile Include="Models\RankingModel.cs" />
@@ -173,6 +176,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Usuario\Crear.cshtml" />
+    <Content Include="Views\Usuario\Editar.cshtml" />
+    <Content Include="Views\Usuario\Eliminar.cshtml" />
+    <Content Include="Views\Usuario\Ver.cshtml" />
+    <Content Include="Views\KeyValuePacienteList\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -210,6 +218,7 @@
       <CustomToolNamespace>Resource</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
