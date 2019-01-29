@@ -1,0 +1,34 @@
+﻿@model IEnumerable<GameOverOnlineSolution.Models.KeyValueUserModel>
+
+@{
+    ViewBag.Title = "Navegador";
+    Layout = null;
+}
+
+<h2>@Resources.Resource.NavigatorUser</h2>
+<p>
+    @Html.ActionLink(Resources.Resource.CreateNew, "../Usuario/Crear")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.ActionLink(Resources.Resource.View, "../Usuario/Ver", new { mCodigo = item.UsuarioId }) |
+                @Html.ActionLink(Resources.Resource.Edit, "../Usuario/Editar", new { mCodigo = item.UsuarioId }) |
+                @Html.ActionLink(Resources.Resource.Delete, "../Usuario/Eliminar", new { mCodigo = item.UsuarioId })
+            </td>
+        </tr>
+    }
+
+</table>

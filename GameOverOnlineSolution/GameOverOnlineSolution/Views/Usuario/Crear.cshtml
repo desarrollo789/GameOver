@@ -1,0 +1,56 @@
+﻿@model GameOverOnlineSolution.Models.UsuarioModel
+@{
+    ViewBag.Title = "Create";
+
+}
+<h2>@Resource.Resource.CreateUser</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+<fieldset>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Nombre)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Nombre)
+        @Html.ValidationMessageFor(model => model.Nombre)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Apellido)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Apellido)
+        @Html.ValidationMessageFor(model => model.Apellido)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Username)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Username)
+        @Html.ValidationMessageFor(model => model.Username)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Sexo)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(model => model.Sexo.SexoId, (IEnumerable<SelectListItem>)ViewBag.ListaSexos)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FechaNacimiento)
+    </div>
+    <div class="editor-label">
+        @Html.EditorFor(model => model.FechaNacimiento, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "Enter Fecha de nacimiento" } })
+        @Html.ValidationMessageFor(model => model.FechaNacimiento, "", new { @class = "text-danger" })
+    </div>
+
+    <p>
+        <input type="submit" value=@Resources.Resource.Create />
+    </p>
+</fieldset>
+}
+
+<div>
+    @Html.ActionLink("Volver atras", "../KeyValueUsuarioList/Index")
+</div>
+

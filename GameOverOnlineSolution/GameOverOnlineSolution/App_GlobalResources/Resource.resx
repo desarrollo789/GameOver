@@ -126,6 +126,24 @@
   <data name="CommentText" xml:space="preserve">
     <value>Comment</value>
   </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>Create New</value>
+  </data>
+  <data name="CreateUser" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
   <data name="EmailProvider" xml:space="preserve">
     <value>Email of the Provider</value>
   </data>
@@ -177,10 +195,22 @@
   <data name="LastNamerMessageError" xml:space="preserve">
     <value>The {0} must be at least {2} characters long.</value>
   </data>
+  <data name="MessageDelete" xml:space="preserve">
+    <value>Do you want to Eliminate the User?</value>
+  </data>
+  <data name="NavigatorUser" xml:space="preserve">
+    <value>Navigator Users</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="Username" xml:space="preserve">
     <value>Username</value>
   </data>
   <data name="UsernameMessageError" xml:space="preserve">
     <value>The {0} must be at least {2} characters long.</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
   </data>
 </root>
