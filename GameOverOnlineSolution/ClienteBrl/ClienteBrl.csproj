@@ -45,6 +45,7 @@
     <Compile Include="SexoListBrl.cs" />
     <Compile Include="UsuarioBrl.cs" />
     <Compile Include="VideoJuegoBrl.cs" />
+    <Compile Include="VideoJuegoListBrl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClienteDal\ClienteDal.csproj">

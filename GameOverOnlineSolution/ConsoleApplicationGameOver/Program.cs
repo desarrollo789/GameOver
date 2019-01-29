@@ -10,8 +10,8 @@ namespace ConsoleApplicationGameOver
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Listar Usuarios");
-            var listaUsuarios = ();
+            Console.WriteLine("Listar VideoJuegos");
+            var listarvideojuego = ClienteBrl.;
         }
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="UsuarioDal.cs" />
     <Compile Include="UsuarioListDal.cs" />
     <Compile Include="VideoJuegoDal.cs" />
+    <Compile Include="VideoJuegoListDal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Comun\Comun.csproj">

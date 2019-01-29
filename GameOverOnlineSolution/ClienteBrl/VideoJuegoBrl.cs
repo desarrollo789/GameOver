@@ -5,7 +5,7 @@ using ClienteDal;
 
 namespace ClienteBrl
 {
-    class VideoJuegoBrl
+    public class VideoJuegoBrl
     {
         /// <summary>
         /// Metodo que sirve para insertar a la base de datos

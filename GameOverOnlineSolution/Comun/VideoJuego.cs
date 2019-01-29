@@ -43,6 +43,12 @@ namespace Comun
         public bool Eliminado { get; set; }
 
         /// <summary>
+        /// Fecha lanzamiento de juego
+        /// </summary>
+
+        public DateTime Fecha { get; set; }
+
+        /// <summary>
         /// Rankin del Juego
         /// </summary>
         
@@ -59,6 +65,11 @@ namespace Comun
         ///</summary>
         
         public Comentario Comentario { get; set; }
+
+        ///<summary>
+        ///Fecha de lazamiento
+        ///</summary>
+        
         #endregion
 
 
