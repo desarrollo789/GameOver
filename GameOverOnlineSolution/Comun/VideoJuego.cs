@@ -52,23 +52,25 @@ namespace Comun
         /// Rankin del Juego
         /// </summary>
         
-        public Ranking Rankin { get; set; }
+        public Ranking RankingId { get; set; }
 
         ///<summary>
         ///Categoria del Videojuego
         ///</summary>
         
-        public Categoria Categoria { get; set; }
+        public Categoria CategoriaId { get; set; }
 
         ///<summary>
         ///Comentario del Videojuego
         ///</summary>
         
-        public Comentario Comentario { get; set; }
+        public Comentario ComentarioId { get; set; }
 
         ///<summary>
-        ///Fecha de lazamiento
+        ///Proveedor del VideoJuego
         ///</summary>
+        
+        public Proveedor ProveedorId { get; set; }
         
         #endregion
 

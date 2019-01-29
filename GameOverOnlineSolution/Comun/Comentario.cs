@@ -18,7 +18,7 @@ namespace Comun
         /// <summary>
         /// Identificador de usuario para un comentario
         /// </summary>
-        public int UsuarioId { get; set; }
+        public Usuario UsuarioId { get; set; }
         /// <summary>
         /// Texto del comentario
         /// </summary>

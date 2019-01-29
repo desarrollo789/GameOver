@@ -1,4 +1,4 @@
-﻿+using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -9,7 +9,7 @@ namespace ClienteDal
     public class Methods
     {
         //Cadena de conexion a la base de datos
-        public static string _connectionString = ConfigurationManager.ConnectionStrings["WebAppGameOverConnectionString"].ConnectionString;
+        public static string _ConecionString = ConfigurationManager.ConnectionStrings["GameOverConnectionString"].ConnectionString;
 
         /// <summary>
         /// Retorna un comando sql relacionado a la conexion
@@ -17,7 +17,7 @@ namespace ClienteDal
         /// <retuns></retuns>
         public static SqlCommand CreateBasicCommand()
         {
-            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlConnection connection = new SqlConnection(_ConecionString);
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = connection;
             return cmd;
@@ -29,7 +29,7 @@ namespace ClienteDal
         ///<retuns></retuns>
         public static SqlCommand CreateBasicCommand(string query)
         {
-            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlConnection connection = new SqlConnection(_ConecionString);
             SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = connection;
             return cmd;
@@ -271,7 +271,7 @@ namespace ClienteDal
         {
             List<SqlCommand> res = new List<SqlCommand>();
 
-            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlConnection connection = new SqlConnection(_ConecionString);
             for (int i = 0; i < lista.Count; i++)
             {
                 SqlCommand cmd = new SqlCommand(lista[i]);
@@ -289,7 +289,7 @@ namespace ClienteDal
         {
             List<SqlCommand> res = new List<SqlCommand>();
 
-            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlConnection connection = new SqlConnection(_ConecionString);
             for (int i = 0; i < x; i++)
             {
                 SqlCommand cmd = new SqlCommand();

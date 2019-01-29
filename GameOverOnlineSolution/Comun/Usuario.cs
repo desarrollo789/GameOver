@@ -44,7 +44,7 @@ namespace Comun
         ///<summary>
         /// Rol de Administrador
         ///</summary>
-        public bool Admin { get; set; }
+        public bool Administrador { get; set; }
 
         ///<summary>
         /// Sexo del Usuario
@@ -58,25 +58,19 @@ namespace Comun
         /// <summary>
         /// Sexo del paciente
         /// </summary>
-        public Sexo Sexo { get; set; }
+        public Sexo SexoId { get; set; }
 
-        ///<summary>
-        ///Comentario del Usuario
-        ///</summary>
 
-        public Comentario Comentario { get; set; }
-
-        ///<summary>
-        ///Ranking del Usuario
-        ///</summary>
+        /////<summary>
+        /////Ranking del Usuario
+        /////</summary>
         
-        public Ranking Ranking { get; set; }
+        //public Ranking Ranking { get; set; }
 
         ///<summary>
         ///Fecha de registro
         ///</summary>
-        
-
+        public DateTime Fechaderegistro { get; set; }        
         #endregion
     }
 }

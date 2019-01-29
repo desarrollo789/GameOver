@@ -6,32 +6,36 @@ using Comun;
 namespace ClienteDal
 {
     /// <summary>
-    /// Clase que nos parmite interactuar con la base de datos de clite
+    /// Clase que nos permite interactuar con la base de datos de usuario
     /// </summary>
     public class UsuarioDal
     {
         /// <summary>
         /// Metodo que sirve para insertar a la base de datos
         /// </summary>
-        /// <param name="usuario">Objeto paciente</param>
+        /// <param name="usuario">Objeto usuario</param>
         public static void Insertar(Usuario usuario)
         {
-            Methods.GenerateLogsDebug("UsuarioDal", "Insertar", string.Format("{0} Info: {1}", DateTime.Now.ToLongDateString(), "Empezando a ejecutar el metodo acceso a datos para eliminar un paciente"));
+            Methods.GenerateLogsDebug("UsuarioDal", "Insertar", string.Format("{0} Info: {1}", DateTime.Now.ToLongDateString(), "Empezando a ejecutar el metodo acceso a datos para insertar un usuario"));
             SqlCommand command = null;
 
             // Proporcionar la cadena de consulta
-            string queryString = @"INSERT INTO PACIENTES(PacienteId,Nombre,Apellido,SexoId,FechaNacimiento,Eliminado)
+            string queryString = @"INSERT INTO Usuario(Nombre, Apellido, CorreoElectronico , FechaNacimiento, Username, Administrador, Eliminado, SexoId, Fechaderegistro)
                                     VALUES
-                                    (@pacienteId, @nombre, @apellido, @sexoId, @fechaNacimiento, @eliminado)";
+                                    (@nombre, @apellido, @correoelectronico, @sexoid, @fechanacimiento, @username, @administrador, @eliminado, @sexoid, @fechaderegistro)";
             try
             {
                 command = Methods.CreateBasicCommand(queryString);
                 command.Parameters.AddWithValue("@nombre", usuario.Nombre);
                 command.Parameters.AddWithValue("@apellido", usuario.Apellido);
-                command.Parameters.AddWithValue("@usuarioId", usuario.UsuarioId);
-                command.Parameters.AddWithValue("@sexoId", usuario.Sexo.SexoId);
-                command.Parameters.AddWithValue("@fechaNacimiento", usuario.FechaNacimiento);
-                command.Parameters.AddWithValue("@eliminado", 0);
+                command.Parameters.AddWithValue("@correoelectronico", usuario.CorreoElectronico);
+                command.Parameters.AddWithValue("@fechanacimiento", usuario.FechaNacimiento);
+                command.Parameters.AddWithValue("@username", usuario.Username);
+                command.Parameters.AddWithValue("@administrador",usuario.Administrador);
+                command.Parameters.AddWithValue("@eliminado", usuario.Eliminado);
+                command.Parameters.AddWithValue("@sexoid", usuario.SexoId);
+                command.Parameters.AddWithValue("@fechaderegistro", usuario.Fechaderegistro);
+
                 Methods.ExecuteBasicCommand(command);
             }
             catch (SqlException ex)
@@ -44,7 +48,7 @@ namespace ClienteDal
                 Methods.GenerateLogsRelease("UsurioDal", "Insertar", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
                 throw ex;
             }
-            Methods.GenerateLogsDebug("UsuarioDal", "Insertar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para insertar un paciente"));
+            Methods.GenerateLogsDebug("UsuarioDal", "Insertar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para insertar un usuario"));
         }
         /// <summary>
         /// Eliminar usuario
@@ -79,7 +83,7 @@ namespace ClienteDal
 
         }
         /// <summary>
-        /// Actualiza los datos del paciente en la base de datos
+        /// Actualiza los datos del usuario en la base de datos
         /// </summary>
         /// <param name="usuario"></param>
         public static void Actualizar(Usuario usuario)
@@ -89,16 +93,22 @@ namespace ClienteDal
             SqlCommand command = null;
 
             // Proporcionar la cadena de consulta
-            string queryString = @"UPDATE USUARIO SET Nombre=@nombre, Apellido=@apellido, SexoId=@sexoId, fechaNacimiento=@fechaNacimiento, Eliminado= @eliminado Where UsuarioId=@usuarioId";
+            string queryString = @"UPDATE Usuario SET Nombre=@nombre, Apellido=@apellido, CorreoElectronico=@correoelectronico, FechaNacimiento=@fechanacimiento, Userneme=@username, Administrador=@administrador, Eliminado=@eliminado, SexoId=@sexoid, Fechaderegistro=@fechaderegistro Where UsuarioId=@usuarioId";
             try
             {
-                command = Methods.CreateBasicCommand(queryString);
-                command.Parameters.AddWithValue("@pacienteId", usuario.UsuarioId);
+                command = Methods.CreateBasicCommand(queryString);                
                 command.Parameters.AddWithValue("@nombre", usuario.Nombre);
                 command.Parameters.AddWithValue("@apellido", usuario.Apellido);
-                command.Parameters.AddWithValue("@sexoId", usuario.Sexo.SexoId);
-                command.Parameters.AddWithValue("@fechaNacimiento", usuario.FechaNacimiento);
+                command.Parameters.AddWithValue("@correoelectronico", usuario.CorreoElectronico);
+                command.Parameters.AddWithValue("@fechanacimiento", usuario.FechaNacimiento);
+                command.Parameters.AddWithValue("@username", usuario.Username);
+                command.Parameters.AddWithValue("@administrador", usuario.Administrador);
                 command.Parameters.AddWithValue("@eliminado", usuario.Eliminado);
+                command.Parameters.AddWithValue("@sexoId", usuario.SexoId);
+                command.Parameters.AddWithValue("@fechaderegistro", usuario.Fechaderegistro);
+                
+
+                command.Parameters.AddWithValue("@usuarioid", usuario.UsuarioId);
                 Methods.ExecuteBasicCommand(command);
             }
             catch (SqlException ex)
@@ -108,10 +118,10 @@ namespace ClienteDal
             }
             catch (Exception ex)
             {
-                Methods.GenerateLogsRelease("NombreDal", "Actualizar", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
+                Methods.GenerateLogsRelease("UsuarioDal", "Actualizar", string.Format("{0} {1} Error: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), ex.Message));
                 throw ex;
             }
-            Methods.GenerateLogsDebug("NombreDal", "Insertar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para Actualizar un paciente"));
+            Methods.GenerateLogsDebug("UsuarioDal", "Insertar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para Actualizar un usuario"));
         }
         /// <summary>
         /// Obtine  la informacion de un paciente
@@ -123,7 +133,7 @@ namespace ClienteDal
             Usuario res = new Usuario();
             SqlCommand cmd = null;
             SqlDataReader dr = null;
-            string query = "Select * From Pacientes where PacienteId = @id";
+            string query = "Select * From Usuario where UsuarioId = @id";
             try
             {
                 cmd = Methods.CreateBasicCommand(query);
@@ -136,9 +146,14 @@ namespace ClienteDal
                         UsuarioId = dr.GetInt32(0),
                         Nombre = dr.GetString(1),
                         Apellido = dr.GetString(2),
-                        Sexo = SexoDal.Get(dr.GetByte(3)),
+                        CorreoElectronico = dr.GetString(3),
                         FechaNacimiento = dr.GetDateTime(4),
-                        Eliminado = dr.GetBoolean(5)
+                        Username = dr.GetString(5),
+                        Administrador = dr.GetBoolean(6),
+                        Eliminado = dr.GetBoolean(7),
+                        SexoId = SexoDal.Get(dr.GetByte(8)),
+                        Fechaderegistro = dr.GetDateTime(9)
+                        
                     };
                 }
             }

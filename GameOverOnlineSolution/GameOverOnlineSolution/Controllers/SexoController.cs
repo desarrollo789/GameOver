@@ -34,9 +34,9 @@ namespace GameOverOnlineSolution.Controllers
         //
         // GET: /SexoList/
 
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
     }
 }

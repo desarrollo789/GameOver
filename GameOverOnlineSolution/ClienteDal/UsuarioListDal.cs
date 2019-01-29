@@ -33,14 +33,12 @@ namespace ClienteDal
                         UsuarioId = idUsuario,                        
                         Nombre = usuario.Nombre,
                         Apellido = usuario.Apellido,                        
-                        Sexo = usuario.Sexo,
+                        SexoId = usuario.SexoId,
                         FechaNacimiento = usuario.FechaNacimiento,
                         CorreoElectronico = usuario.CorreoElectronico,
                         Username = usuario.Username,                           
                         Eliminado = usuario.Eliminado,                        
-                        FechaIngreso = dr.GetDateTime(2),
-                        Cargo = CargoDal.Get(dr.GetInt32(3)),
-                        Sueldo = dr.GetSqlDecimal(4).ToDouble()
+                        Fechaderegistro = dr.GetDateTime(2),
                     });
                 }
             }

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOverOnlineSolution", "GameOverOnlineSolution\GameOverOnlineSolution.csproj", "{FFF50A84-4FD2-4323-9172-AA121AFFD66D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Brl", "Brl", "{44E89DCD-CD60-4577-8B11-38D44A60302C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2AFBDE6B-6211-4176-AB1D-C7E5213B8E05}"
@@ -27,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FFF50A84-4FD2-4323-9172-AA121AFFD66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FFF50A84-4FD2-4323-9172-AA121AFFD66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FFF50A84-4FD2-4323-9172-AA121AFFD66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FFF50A84-4FD2-4323-9172-AA121AFFD66D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{42F679BD-54B8-4B71-AF76-AE20FD17211C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{42F679BD-54B8-4B71-AF76-AE20FD17211C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42F679BD-54B8-4B71-AF76-AE20FD17211C}.Release|Any CPU.ActiveCfg = Release|Any CPU

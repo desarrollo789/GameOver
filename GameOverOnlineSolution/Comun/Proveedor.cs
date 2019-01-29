@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comun
 {
-    class Proveedor
+    public class Proveedor
     {
         #region atributos
         /// <summary>

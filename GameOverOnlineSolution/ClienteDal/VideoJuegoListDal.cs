@@ -17,7 +17,7 @@ namespace ClienteDal
             SqlCommand cmd = null;
             SqlDataReader dr = null;
 
-            string query = "SELECT * FROM Personal";
+            string query = "SELECT * FROM VideoJuego";
             try
             {
                 cmd = Methods.CreateBasicCommand(query);
@@ -25,21 +25,21 @@ namespace ClienteDal
 
                 while (dr.Read())
                 {
-                    int idVideoJuego = dr.GetInt32(0);
+                    int idVideoJuego = dr.GetInt32(1);
                     VideoJuego videojuego = VideoJuegoDal.Get(idVideoJuego);
 
                     res.Add(new VideoJuego()
                     {
                         VideoJuegoId = idVideoJuego,
                         Nombre = videojuego.Nombre,
-                        Categoria = videojuego.Categoria,
+                        CategoriaId = videojuego.CategoriaId,
                         Fecha = videojuego.Fecha,
                         Precio = videojuego.Precio,
                         Trailer = videojuego.Trailer,
                         Eliminado = videojuego.Eliminado,
-                        Comentario = videojuego.Comentario,
+                        ComentarioId = videojuego.ComentarioId,
                         Portada = videojuego.Portada,
-                        Rankin = videojuego.Rankin,
+                        RankingId = videojuego.RankingId,
                     });
                 }
             }

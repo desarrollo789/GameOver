@@ -97,7 +97,7 @@ namespace ClienteBrl
                         UsuarioId = dr.GetInt32(0),
                         Nombre = dr.GetString(1),
                         Apellido = dr.GetString(2),
-                        Sexo = SexoDal.Get(dr.GetByte(3)),
+                        SexoId = SexoDal.Get(dr.GetByte(3)),
                         FechaNacimiento = dr.GetDateTime(4),
                         Eliminado = dr.GetBoolean(5)
                     };

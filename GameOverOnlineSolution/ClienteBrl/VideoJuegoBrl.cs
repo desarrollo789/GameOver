@@ -29,7 +29,7 @@ namespace ClienteBrl
             }
         }
         /// <summary>
-        /// Eliminar Paciente
+        /// Eliminar VideoJuego
         /// </summary>
         /// <param name="id">Identificador del videojuego</param>
         public static void Eliminar(int id)

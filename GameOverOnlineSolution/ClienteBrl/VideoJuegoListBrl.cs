@@ -9,7 +9,7 @@ using ClienteDal;
 
 namespace ClienteBrl
 {
-    class VideoJuegoListBrl
+    public class VideoJuegoListBrl
     {
         /// <summary>
         /// Obtiene la lista de personal
@@ -17,7 +17,23 @@ namespace ClienteBrl
         /// <returns>Categoria Lista</returns>
         public static VideoJuegoList Get()
         {
-            return vi
+            VideoJuegoList lista = null;
+
+            try
+            {
+                lista = VideoJuegoListDal.Get();
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return lista;
         }
     }
 }

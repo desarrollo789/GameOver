@@ -25,5 +25,6 @@ namespace GameOverOnlineSolution.Models
             get;
             set;
         }
+        #endregion
     }
 }

@@ -154,7 +154,7 @@
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\VentaController.cs" />
     <Compile Include="Controllers\VentaDetalleController.cs" />
-    <Compile Include="Controllers\VideoJuegoController.cs" />
+    <Compile Include="Controllers\VideoJuegoControllers.cs" />
     <Compile Include="Models\ComentarioModel.cs" />
     <Compile Include="Models\KeyValueUsuarioListModel.cs" />
     <Compile Include="Models\KeyValueUsuarioModel.cs" />
