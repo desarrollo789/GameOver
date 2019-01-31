@@ -19,5 +19,11 @@ namespace Comun
         /// Define la puntuacion obtenida el ranking
         /// </summary>
         public int Puntuacion { get; set; }
+
+        /// <summary>
+        /// Define estado de eliminado del juego
+        /// </summary>
+        public bool Eliminado { get; set; }
+
     }
 }

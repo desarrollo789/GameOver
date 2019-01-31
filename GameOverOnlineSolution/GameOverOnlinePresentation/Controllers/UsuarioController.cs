@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Comun;
 using ClienteBrl;
+using GameOverOnlinePresentation.Models;
 
 namespace GameOverOnlinePresentation.Controllers
 {
@@ -61,13 +62,13 @@ namespace GameOverOnlinePresentation.Controllers
                 Usuario usuario = new Usuario()
                 {
                     UsuarioId = 106,
-                    NombreCliente = model.NombreCliente,
-                    ApellidoCliente = model.ApellidoCliente,
+                    Nombre = model.Nombre,
+                    Apellido = model.Apellido,
                     CorreoElectronico = model.CorreoElectronico,
                     FechaNacimiento = model.FechaNacimiento.Value,
-                    Fechaderegistro = model.Fechaderegitro.Value,
+                    Fechaderegistro = model.Fechaderegistro.Value,
                     Username = model.Username,
-                    Sexo = new Sexo() { SexoId = model.Sexo.SexoId },
+                    SexoId = new Sexo() { SexoId = usuario.Sexo. },
                     Administrador = false,
                     Eliminado = false,
                 };
@@ -93,14 +94,24 @@ namespace GameOverOnlinePresentation.Controllers
 
         // POST: Usuario/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int CodigoUser)
         {
             try
             {
-                
-                Usuario usuario = new Usuario()
+                CargarSexo();
+                Usuario user = UsuarioBrl.Get(CodigoUser);
+                UsuarioModel usuario = new UsuarioModel()
                 {
-
+                    UsuarioId = usuario.UsuarioId,
+                    Nombre = usuario.Nombre,
+                    Apellido = usuario.Apellido,
+                    CorreoElectronico = usuario.CorreoElectronico,
+                    FechaNacimiento = usuario.FechaNacimiento,
+                    Fechaderegistro = usuario.Fechaderegistro,
+                    Username = model.Username,
+                    SexoId = new Sexo() { SexoId = usuario.Sexo.Nombre  },
+                    Administrador = false,
+                    Eliminado = false,
                 }
                 return RedirectToAction("Index");
             }

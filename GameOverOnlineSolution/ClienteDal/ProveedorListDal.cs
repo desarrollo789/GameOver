@@ -8,16 +8,17 @@ using Comun;
 
 namespace ClienteDal
 {
-    public class VideoJuegoListDal
+    class ProveedorListDal
     {
-        public static VideoJuegoList Get()
+
+        public static ProveedorList Get()
         {
-            VideoJuegoList res = new VideoJuegoList();
+            ProveedorList res = new ProveedorList();
 
             SqlCommand cmd = null;
             SqlDataReader dr = null;
 
-            string query = "SELECT * FROM VideoJuego";
+            string query = "SELECT * FROM Proveedor";
             try
             {
                 cmd = Methods.CreateBasicCommand(query);
@@ -25,22 +26,15 @@ namespace ClienteDal
 
                 while (dr.Read())
                 {
-                    int idVideoJuego = dr.GetInt32(0);
-                    VideoJuego videojuego = VideoJuegoDal.Get(idVideoJuego);
+                    int idProveedor = dr.GetInt32(1);
+                    Proveedor proveedor = ProveedorDal.Get(idProveedor);
 
-                    res.Add(new VideoJuego()
+                    res.Add(new Proveedor()
                     {
-                        VideoJuegoId = idVideoJuego,
-                        Nombre = videojuego.Nombre,
-                        CategoriaId = videojuego.CategoriaId,
-                        Fecha = videojuego.Fecha,
-                        Precio = videojuego.Precio,
-                        Trailer = videojuego.Trailer,
-                        Eliminado = videojuego.Eliminado,
-                        ComentarioId = videojuego.ComentarioId,
-                        Portada = videojuego.Portada,
-                        RankingId = videojuego.RankingId,
-                        ProveedorId = videojuego.ProveedorId,
+                        ProveedorId = idProveedor,
+                        NombreProveedor = proveedor.NombreProveedor,
+                        ApellidoProveedor = proveedor.ApellidoProveedor,
+                        CorreoElectronico = proveedor.ApellidoProveedor,
                     });
                 }
             }

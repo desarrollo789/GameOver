@@ -38,7 +38,7 @@ namespace Comun
         ///<summary>
         /// Nombre de Usuario(username)
         ///</summary>
-        public string Username { get; set; } 
+        public bool Username { get; set; } 
 
 
         ///<summary>

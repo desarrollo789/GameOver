@@ -12,7 +12,7 @@ namespace ClienteBrl
     public class VideoJuegoListBrl
     {
         /// <summary>
-        /// Obtiene la lista de personal
+        /// Obtiene la lista de videojuegos
         /// </summary>
         /// <returns>Categoria Lista</returns>
         public static VideoJuegoList Get()
