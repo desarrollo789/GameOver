@@ -1,0 +1,37 @@
+﻿@model CRUD.Models.ProveedorModel
+@{
+    ViewBag.Title = "View";
+    Layout = null;
+}
+
+<h2>@Resource.Resource.ViewUser</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NombreProveedor)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.NombreProveedor, new { @readonly = "readonly" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ApellidoProveedor)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.ApellidoProveedor, new { @readonly = "readonly" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CorreoElectronico)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.CorreoElectronico, new { @readonly = "readonly" })
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Volver atras", "../KeyValueUsuarioList/Index")
+</div>
