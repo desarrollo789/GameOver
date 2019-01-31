@@ -102,6 +102,8 @@
     </Compile>
     <Compile Include="Models\KeyValueProveedorListModel.cs" />
     <Compile Include="Models\KeyValueProveedorModel.cs" />
+    <Compile Include="Models\KeyValueUsuarioListModel.cs" />
+    <Compile Include="Models\KeyValueUsuarioModel.cs" />
     <Compile Include="Models\ProveedorModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
