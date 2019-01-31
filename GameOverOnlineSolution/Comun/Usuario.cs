@@ -52,10 +52,6 @@ namespace Comun
         public bool Eliminado { get; set; }
 
         /// <summary>
-        /// Recupera la informacion del password mediante in ID del mismo
-        /// </summary>
-
-        /// <summary>
         /// Sexo del paciente
         /// </summary>
         public Sexo SexoId { get; set; }
@@ -70,7 +66,13 @@ namespace Comun
         ///<summary>
         ///Fecha de registro
         ///</summary>
-        public DateTime Fechaderegistro { get; set; }        
+        public DateTime Fechaderegistro { get; set; }
+
+
+        /// <summary>
+        /// Recupera la informacion del password mediante in ID del mismo
+        /// </summary>
+
         #endregion
     }
 }

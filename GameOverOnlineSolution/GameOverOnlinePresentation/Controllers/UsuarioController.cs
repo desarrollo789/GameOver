@@ -101,7 +101,7 @@ namespace GameOverOnlinePresentation.Controllers
                 Fechaderegistro = user.Fechaderegistro,
                 Username = user.Username,
                 Eliminado = user.Eliminado,
-                SexoId = new Sexo() { SexoId = user.Sexo.Nombre , Nombre=user.Sexo.SexoId},
+                SexoId = new Sexo() { SexoId = user.SexoId.Nombre , Nombre=user.Sexo.SexoId},
                 
             };
             return View(usuario);
