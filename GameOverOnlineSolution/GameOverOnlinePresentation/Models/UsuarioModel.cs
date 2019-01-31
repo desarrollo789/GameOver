@@ -66,11 +66,7 @@ namespace GameOverOnlinePresentation.Models
             get;
             set;
         }
-
-        [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Resource.Resource))]
-        [Display(Name = "Username")]
-        [StringLength(50, ErrorMessageResourceName = "UserNameMessageError", MinimumLength = 3, ErrorMessageResourceType = typeof(Resource.Resource))]
-        public string Administrador
+        public bool Administrador
         {
             get;
             set;
@@ -83,7 +79,7 @@ namespace GameOverOnlinePresentation.Models
             get;
             set;
         }
-        [Display(Name = "SexId")]
+        [Display(Name = "Sex")]
         public SexoModel SexoId
         {
             get;

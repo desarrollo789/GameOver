@@ -68,7 +68,7 @@ namespace GameOverOnlinePresentation.Controllers
                     FechaNacimiento = model.FechaNacimiento.Value,
                     Fechaderegistro = model.Fechaderegistro.Value,
                     Username = model.Username,
-                    SexoId = new Sexo() { SexoId = usuario.Sexo. },
+                    SexoId = new Sexo() { SexoId = model.Sexo.SexoId},
                     Administrador = false,
                     Eliminado = false,
                 };
@@ -87,32 +87,44 @@ namespace GameOverOnlinePresentation.Controllers
 
 
         // GET: Usuario/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int CodigoUser)
         {
-            return View();
+            CargarSexo();
+            Usuario user = UsuarioBrl.Get(CodigoUser);
+            UsuarioModel usuario = new UsuarioModel()
+            {
+                UsuarioId = user.UsuarioId,
+                Nombre = user.Nombre,
+                Apellido = user.Apellido,
+                CorreoElectronico = user.CorreoElectronico,
+                FechaNacimiento = user.FechaNacimiento,
+                Fechaderegistro = user.Fechaderegistro,
+                Username = user.Username,
+                Eliminado = user.Eliminado,
+                SexoId = new SexoModel() { SexoId = user.SexoId.SexoId , Nombre = user.SexoId.Nombre},
+                
+            };
+            return View(usuario);
         }
 
         // POST: Usuario/Edit/5
         [HttpPost]
-        public ActionResult Edit(int CodigoUser)
+        public ActionResult Edit(int CodigoUser, UsuarioModel model)
         {
+            CargarSexo();
             try
             {
-                CargarSexo();
-                Usuario user = UsuarioBrl.Get(CodigoUser);
-                UsuarioModel usuario = new UsuarioModel()
+                Usuario usuario = new Usuario()
                 {
-                    UsuarioId = usuario.UsuarioId,
-                    Nombre = usuario.Nombre,
-                    Apellido = usuario.Apellido,
-                    CorreoElectronico = usuario.CorreoElectronico,
-                    FechaNacimiento = usuario.FechaNacimiento,
-                    Fechaderegistro = usuario.Fechaderegistro,
+                    UsuarioId = CodigoUser,
+                    Nombre = model.Nombre,
+                    Apellido = model.Apellido,
                     Username = model.Username,
-                    SexoId = new Sexo() { SexoId = usuario.Sexo.Nombre  },
-                    Administrador = false,
                     Eliminado = false,
-                }
+                    FechaNacimiento = model.FechaNacimiento.Value,
+                    SexoId = new Sexo() { SexoId = model.SexoId.SexoId },
+                };
+                UsuarioBrl.Actualizar(usuario);
                 return RedirectToAction("Index");
             }
             catch
@@ -122,19 +134,20 @@ namespace GameOverOnlinePresentation.Controllers
         }
 
         // GET: Usuario/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete()
         {
             return View();
         }
 
         // POST: Usuario/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int CodigoUser)
         {
             try
             {
                 // TODO: Add delete logic here
 
+                UsuarioBrl.Eliminar(CodigoUser);
                 return RedirectToAction("Index");
             }
             catch
