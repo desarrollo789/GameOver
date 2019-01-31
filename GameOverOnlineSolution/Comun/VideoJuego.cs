@@ -32,12 +32,12 @@ namespace Comun
         public string Portada { get; set; }
 
         /// <summary>
-        /// define la portada del juego
+        /// define el trailer del juego
         /// </summary>
 
         public string Trailer { get; set; }
         /// <summary>
-        /// define la trailer del juego
+        /// define estado de eliminado del juego
         /// </summary>
         
         public bool Eliminado { get; set; }

@@ -8,8 +8,8 @@ namespace ClienteDal
 {
     public class Methods
     {
-        //Cadena de conexion a la base de datos
-        public static string _ConecionString = ConfigurationManager.ConnectionStrings["GameOverConnectionString"].ConnectionString;
+        //Obtiene la Cadena de conexion a la base de datos
+        public static string _cadenadeconecion = ConfigurationManager.ConnectionStrings["GameOverConnectionString"].ConnectionString;
 
         /// <summary>
         /// Retorna un comando sql relacionado a la conexion
@@ -17,7 +17,7 @@ namespace ClienteDal
         /// <retuns></retuns>
         public static SqlCommand CreateBasicCommand()
         {
-            SqlConnection connection = new SqlConnection(_ConecionString);
+            SqlConnection connection = new SqlConnection(_cadenadeconecion);
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = connection;
             return cmd;
@@ -29,7 +29,7 @@ namespace ClienteDal
         ///<retuns></retuns>
         public static SqlCommand CreateBasicCommand(string query)
         {
-            SqlConnection connection = new SqlConnection(_ConecionString);
+            SqlConnection connection = new SqlConnection(_cadenadeconecion);
             SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = connection;
             return cmd;
@@ -66,7 +66,7 @@ namespace ClienteDal
 
             try
             {
-                //  cmd.Connection.Open();
+                cmd.Connection.Open();
                 SqlDataAdapter data = new SqlDataAdapter(cmd);//la conexion ya esta abierta
                 data.Fill(res);
 
@@ -83,7 +83,7 @@ namespace ClienteDal
             }
             finally
             {
-                // cmd.Connection.Close();
+                cmd.Connection.Close();
             }
 
             return res;
@@ -99,7 +99,7 @@ namespace ClienteDal
 
             try
             {
-                //  cmd.Connection.Open();
+                // cmd.Connection.Open();
                 SqlDataAdapter data = new SqlDataAdapter();//la conexion ya esta abierta
                 data.Fill(res);
 
@@ -157,7 +157,7 @@ namespace ClienteDal
             try
             {
                 cmd.Connection.Open();
-                return cmd.ExecuteScalar().ToString();
+                //return cmd.ExecuteScalar().ToString();
             }
             catch (SqlException ex)
             {
@@ -173,6 +173,7 @@ namespace ClienteDal
             {
                 cmd.Connection.Close();
             }
+            return cmd.ExecuteScalar().ToString();
         }
         /// <summary>
         /// consigue el siguiente id de una tabla aummentado con su incremento
@@ -271,7 +272,7 @@ namespace ClienteDal
         {
             List<SqlCommand> res = new List<SqlCommand>();
 
-            SqlConnection connection = new SqlConnection(_ConecionString);
+            SqlConnection connection = new SqlConnection(_cadenadeconecion);
             for (int i = 0; i < lista.Count; i++)
             {
                 SqlCommand cmd = new SqlCommand(lista[i]);
@@ -289,7 +290,7 @@ namespace ClienteDal
         {
             List<SqlCommand> res = new List<SqlCommand>();
 
-            SqlConnection connection = new SqlConnection(_ConecionString);
+            SqlConnection connection = new SqlConnection(_cadenadeconecion);
             for (int i = 0; i < x; i++)
             {
                 SqlCommand cmd = new SqlCommand();
