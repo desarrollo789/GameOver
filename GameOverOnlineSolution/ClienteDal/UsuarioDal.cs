@@ -149,9 +149,9 @@ namespace ClienteDal
                         CorreoElectronico = dr.GetString(3),
                         FechaNacimiento = dr.GetDateTime(4),
                         Username = dr.GetString(5),
-                        Administrador = dr.GetBoolean(6),
-                        Eliminado = dr.GetBoolean(7),
-                        SexoId = SexoDal.Get(dr.GetByte(8)),
+                        Administrador = dr.GetByte(6),
+                        Eliminado = dr.GetByte(7),
+                        SexoId = SexoDal.Get(dr.GetByte(0)),
                         Fechaderegistro = dr.GetDateTime(9)
                         
                     };

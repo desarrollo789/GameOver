@@ -133,10 +133,11 @@ namespace ClienteDal
                 {
                     res = new Proveedor()
                     {
-                        CorreoElectronico = dr.GetString(0),
-                        NombreProveedor = dr.GetString(1),
-                        ApellidoProveedor = dr.GetString(2),
-                        Eliminado = dr.GetBoolean(3)
+                        ProveedorId = dr.GetInt32(0),
+                        CorreoElectronico = dr.GetString(1),
+                        NombreProveedor = dr.GetString(2),
+                        ApellidoProveedor = dr.GetString(3),
+                        Eliminado = dr.GetByte(4)
                     };
                 }
             }

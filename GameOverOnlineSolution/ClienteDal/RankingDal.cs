@@ -132,7 +132,7 @@ namespace ClienteDal
                     {
                         RankingId = dr.GetInt32(0),
                         Puntuacion = dr.GetInt32(1),                        
-                        Eliminado = dr.GetBoolean(2),                        
+                        Eliminado = dr.GetByte(2),                        
                         //ProveedorId = ProveedorDal.Get(dr.GetInt32(7)),                        
                     };
                 }

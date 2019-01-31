@@ -38,7 +38,7 @@ namespace ClienteDal
                         CorreoElectronico = usuario.CorreoElectronico,
                         Username = usuario.Username,                           
                         Eliminado = usuario.Eliminado,                        
-                        Fechaderegistro = dr.GetDateTime(2),
+                        Fechaderegistro = usuario.Fechaderegistro,
                     });
                 }
             }

@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaDal.cs" />
+    <Compile Include="CategoriaListDal.cs" />
     <Compile Include="ComentarioDal.cs" />
+    <Compile Include="ComentarioListDal.cs" />
     <Compile Include="KeyValueUsuarioListDal.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

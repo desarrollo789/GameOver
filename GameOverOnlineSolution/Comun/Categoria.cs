@@ -17,5 +17,11 @@ namespace Comun
         /// Nombre de la Categoria (siglas)
         /// </summary>
         public string Nombre { get; set; }
+
+        /// <summary>
+        /// Define si el comentario esta eliminado
+        /// </summary>
+        
+        public byte Eliminado { get; set; }
     }
 }
