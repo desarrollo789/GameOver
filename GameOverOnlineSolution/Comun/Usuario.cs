@@ -54,7 +54,7 @@ namespace Comun
         /// <summary>
         /// Sexo del paciente
         /// </summary>
-        public Sexo Sexo { get; set; }
+        public Sexo SexoId { get; set; }
 
 
         /////<summary>

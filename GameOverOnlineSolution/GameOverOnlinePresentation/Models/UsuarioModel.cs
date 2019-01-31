@@ -80,7 +80,7 @@ namespace GameOverOnlinePresentation.Models
             set;
         }
         [Display(Name = "Sex")]
-        public SexoModel Sexo
+        public SexoModel SexoId
         {
             get;
             set;
