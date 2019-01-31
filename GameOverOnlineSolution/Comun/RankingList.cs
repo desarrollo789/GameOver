@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Comun
 {
-    public class KeyValueUsuarioList : List<KeyValueUsuario>
+    /// <summary>
+    /// Clase para manejar una lista de videojuegos
+    /// </summary>
+    public class RankingList : List<Ranking>
     {
 
     }

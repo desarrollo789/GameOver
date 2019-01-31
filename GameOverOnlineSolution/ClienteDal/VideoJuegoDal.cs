@@ -8,9 +8,9 @@ namespace ClienteDal
     public class VideoJuegoDal
     {
         /// <summary>
-        /// Metodo que sirve para insertar a la base de datos
+        /// Metodo que sirve para insertar un videojuego a la base de datos
         /// </summary>
-        /// <param name="paciente">Objeto video juego</param>
+        /// <param name="paciente">Objeto videojuego</param>
         public static void Insertar(VideoJuego videojuego)
         {
             Methods.GenerateLogsDebug("VideoJuegoDal", "Insertar", string.Format("{0} Info: {1}", DateTime.Now.ToLongDateString(), "Empezando a ejecutar el metodo acceso a datos para eliminar un videojuego"));
@@ -48,7 +48,7 @@ namespace ClienteDal
                 throw ex;
             }
 
-            Methods.GenerateLogsDebug("VideoJuegoDal", "Insertar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para insertar un paciente"));
+            Methods.GenerateLogsDebug("VideoJuegoDal", "Insertar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para insertar un videojuego"));
         }
         /// <summary>
         /// Eliminar VideoJuego
@@ -79,7 +79,7 @@ namespace ClienteDal
                 throw ex;
             }
 
-            Methods.GenerateLogsDebug("VideoJuegoDal", "Eliminar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para insertar un paciente"));
+            Methods.GenerateLogsDebug("VideoJuegoDal", "Eliminar", string.Format("{0} {1} Info: {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Termino de ejecutar  el metodo acceso a datos para eliminar un videojuego"));
 
         }
         /// <summary>
@@ -126,7 +126,7 @@ namespace ClienteDal
 
         }
         /// <summary>
-        /// Obtiene  la informacion de un video juego
+        /// Obtiene  la informacion de un videojuego
         /// </summary>
         /// <param name="id">identificador del videojuego</param>
         /// <returns></returns>
@@ -141,6 +141,24 @@ namespace ClienteDal
                 cmd = Methods.CreateBasicCommand(query);
                 cmd.Parameters.AddWithValue("@id", id);
                 dr = Methods.ExecuteDataReaderCommand(cmd);
+                while (dr.Read())
+                {
+                    res = new VideoJuego()
+                    {                        
+                        VideoJuegoId = dr.GetInt32(0),
+                        Nombre = dr.GetString(1),
+                        Precio = dr.GetInt32(2),
+                        Portada = dr.GetString(3),
+                        Trailer = dr.GetString(4),
+                        Eliminado = dr.GetBoolean(5),
+                        Fecha = dr.GetDateTime(6),                                               
+                        ProveedorId = ProveedorDal.Get(dr.GetInt32(7)),
+                        RankingId = RankingDal.Get(dr.GetInt32(8)),
+                        CategoriaId = CategoriaDal.Get(dr.GetInt32(9)),
+                        ComentarioId = ComentarioDal.Get(dr.GetInt32(10)),
+                        //ProveedorId = ProveedorDal.Get(dr.GetInt32(7)),           
+                    };
+                }
             }
             catch (Exception ex)
             {

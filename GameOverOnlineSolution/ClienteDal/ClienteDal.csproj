@@ -41,9 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComentarioDal.cs" />
     <Compile Include="KeyValueUsuarioListDal.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorDal.cs" />
+    <Compile Include="ProveedorListDal.cs" />
+    <Compile Include="RankingDal.cs" />
+    <Compile Include="RankingListDal.cs" />
     <Compile Include="SexoDal.cs" />
     <Compile Include="SexoListDal.cs" />
     <Compile Include="UsuarioDal.cs" />

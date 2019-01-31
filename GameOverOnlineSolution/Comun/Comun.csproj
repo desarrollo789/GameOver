@@ -46,7 +46,9 @@
     <Compile Include="KeyValueUsuario.cs" />
     <Compile Include="KeyValueUsuarioList.cs" />
     <Compile Include="PacienteList.cs" />
+    <Compile Include="ProveedorList.cs" />
     <Compile Include="Ranking.cs" />
+    <Compile Include="RankingList.cs" />
     <Compile Include="Sexo.cs" />
     <Compile Include="SexoList.cs" />
     <Compile Include="Usuario.cs" />

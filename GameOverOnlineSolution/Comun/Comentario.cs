@@ -23,5 +23,9 @@ namespace Comun
         /// Texto del comentario
         /// </summary>
         public string Comentariotext { get; set; }
+        /// <sumary>
+        /// /// define estado de eliminado del juego
+        /// </sumary>
+        public bool Eliminado { get; set; }
     }
 }

@@ -8,16 +8,16 @@ using Comun;
 
 namespace ClienteDal
 {
-    public class VideoJuegoListDal
+    public class RankingListDal
     {
-        public static VideoJuegoList Get()
+        public static RankingList Get()
         {
-            VideoJuegoList res = new VideoJuegoList();
+            RankingList res = new RankingList();
 
             SqlCommand cmd = null;
             SqlDataReader dr = null;
 
-            string query = "SELECT * FROM VideoJuego";
+            string query = "SELECT * FROM Ranking";
             try
             {
                 cmd = Methods.CreateBasicCommand(query);
@@ -25,22 +25,13 @@ namespace ClienteDal
 
                 while (dr.Read())
                 {
-                    int idVideoJuego = dr.GetInt32(0);
-                    VideoJuego videojuego = VideoJuegoDal.Get(idVideoJuego);
+                    int idRanking = dr.GetInt32(0);
+                    Ranking ranking = RankingDal.Get(idRanking);
 
-                    res.Add(new VideoJuego()
+                    res.Add(new Ranking()
                     {
-                        VideoJuegoId = idVideoJuego,
-                        Nombre = videojuego.Nombre,
-                        CategoriaId = videojuego.CategoriaId,
-                        Fecha = videojuego.Fecha,
-                        Precio = videojuego.Precio,
-                        Trailer = videojuego.Trailer,
-                        Eliminado = videojuego.Eliminado,
-                        ComentarioId = videojuego.ComentarioId,
-                        Portada = videojuego.Portada,
-                        RankingId = videojuego.RankingId,
-                        ProveedorId = videojuego.ProveedorId,
+                        RankingId = ranking.RankingId,
+                        Puntuacion = ranking.Puntuacion,
                     });
                 }
             }
