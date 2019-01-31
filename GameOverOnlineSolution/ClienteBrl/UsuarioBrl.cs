@@ -99,7 +99,7 @@ namespace ClienteBrl
                         Apellido = dr.GetString(2),
                         SexoId = SexoDal.Get(dr.GetByte(3)),
                         FechaNacimiento = dr.GetDateTime(4),
-                        Eliminado = dr.GetBoolean(5)
+                        Eliminado = dr.GetByte(5)
                     };
                 }
 

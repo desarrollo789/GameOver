@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaList.cs" />
     <Compile Include="Comentario.cs" />
+    <Compile Include="ComentarioList.cs" />
     <Compile Include="Compra.cs" />
     <Compile Include="KeyValueUsuario.cs" />
     <Compile Include="KeyValueUsuarioList.cs" />

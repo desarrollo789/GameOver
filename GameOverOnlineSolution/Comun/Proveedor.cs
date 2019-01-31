@@ -34,7 +34,7 @@ namespace Comun
         ///<summary>
         /// Eliminado Logico del Proveedor
         ///</summary>
-        public bool Eliminado { get; set; }
+        public byte Eliminado { get; set; }
         #endregion
     }
 }

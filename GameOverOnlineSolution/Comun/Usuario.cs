@@ -38,18 +38,18 @@ namespace Comun
         ///<summary>
         /// Nombre de Usuario(username)
         ///</summary>
-        public bool Username { get; set; } 
+        public string Username { get; set; } 
 
 
         ///<summary>
         /// Rol de Administrador
         ///</summary>
-        public bool Administrador { get; set; }
+        public byte Administrador { get; set; }
 
         ///<summary>
         /// Sexo del Usuario
         ///</summary>
-        public bool Eliminado { get; set; }
+        public byte Eliminado { get; set; }
 
         /// <summary>
         /// Recupera la informacion del password mediante in ID del mismo

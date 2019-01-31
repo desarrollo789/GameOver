@@ -8,17 +8,16 @@ using Comun;
 
 namespace ClienteDal
 {
-    class ProveedorListDal
+    class CategoriaListDal
     {
-
-        public static ProveedorList Get()
+        public static CategoriaList Get()
         {
-            ProveedorList res = new ProveedorList();
+            CategoriaList res = new CategoriaList();
 
             SqlCommand cmd = null;
             SqlDataReader dr = null;
 
-            string query = "SELECT * FROM Proveedor";
+            string query = "SELECT * FROM Categoria";
             try
             {
                 cmd = Methods.CreateBasicCommand(query);
@@ -26,15 +25,14 @@ namespace ClienteDal
 
                 while (dr.Read())
                 {
-                    int idProveedor = dr.GetInt32(0);
-                    Proveedor proveedor = ProveedorDal.Get(idProveedor);
+                    int idcategoria = dr.GetInt32(0);
+                    Categoria categoria = CategoriaDal.Get(idcategoria);
 
-                    res.Add(new Proveedor()
+                    res.Add(new Categoria()
                     {
-                        ProveedorId = idProveedor,
-                        NombreProveedor = proveedor.NombreProveedor,
-                        ApellidoProveedor = proveedor.ApellidoProveedor,
-                        CorreoElectronico = proveedor.ApellidoProveedor,
+                        CategoriaId = idcategoria,
+                        Nombre = categoria.Nombre,                                              
+                        Eliminado = categoria.Eliminado,                        
                     });
                 }
             }
@@ -54,5 +52,6 @@ namespace ClienteDal
             }
             return res;
         }
+
     }
 }

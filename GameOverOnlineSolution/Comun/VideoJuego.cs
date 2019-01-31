@@ -40,7 +40,7 @@ namespace Comun
         /// define estado de eliminado del juego
         /// </summary>
         
-        public bool Eliminado { get; set; }
+        public byte Eliminado { get; set; }
 
         /// <summary>
         /// Fecha lanzamiento de juego

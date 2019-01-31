@@ -26,6 +26,6 @@ namespace Comun
         /// <sumary>
         /// /// define estado de eliminado del juego
         /// </sumary>
-        public bool Eliminado { get; set; }
+        public byte Eliminado { get; set; }
     }
 }

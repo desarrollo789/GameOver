@@ -8,17 +8,16 @@ using Comun;
 
 namespace ClienteDal
 {
-    class ProveedorListDal
+    public class ComentarioListDal
     {
-
-        public static ProveedorList Get()
+        public static ComentarioList Get()
         {
-            ProveedorList res = new ProveedorList();
+            ComentarioList res = new ComentarioList();
 
             SqlCommand cmd = null;
             SqlDataReader dr = null;
 
-            string query = "SELECT * FROM Proveedor";
+            string query = "SELECT * FROM Comentario";
             try
             {
                 cmd = Methods.CreateBasicCommand(query);
@@ -26,15 +25,14 @@ namespace ClienteDal
 
                 while (dr.Read())
                 {
-                    int idProveedor = dr.GetInt32(0);
-                    Proveedor proveedor = ProveedorDal.Get(idProveedor);
+                    int idComentario = dr.GetInt32(0);
+                    Comentario comentario = ComentarioDal.Get(idComentario);
 
-                    res.Add(new Proveedor()
+                    res.Add(new Comentario()
                     {
-                        ProveedorId = idProveedor,
-                        NombreProveedor = proveedor.NombreProveedor,
-                        ApellidoProveedor = proveedor.ApellidoProveedor,
-                        CorreoElectronico = proveedor.ApellidoProveedor,
+                        ComentarioId = idComentario,
+                        UsuarioId = comentario.UsuarioId,
+                        Comentariotext = comentario.Comentariotext,                        
                     });
                 }
             }

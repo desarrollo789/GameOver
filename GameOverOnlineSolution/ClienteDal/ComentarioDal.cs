@@ -133,9 +133,9 @@ namespace ClienteDal
                     res = new Comentario()
                     {
                         ComentarioId = dr.GetInt32(0),
-                        Comentariotext = dr.GetString(1),
-                        UsuarioId = UsuarioDal.Get(dr.GetInt32(2)),
-                        Eliminado = dr.GetBoolean(3),
+                        Comentariotext = dr.GetString(2),
+                        UsuarioId = UsuarioDal.Get(dr.GetInt32(0)),
+                        Eliminado = dr.GetByte(3),
                         //ProveedorId = ProveedorDal.Get(dr.GetInt32(7)),                        
                     };
                 }
