@@ -68,7 +68,7 @@ namespace GameOverOnlinePresentation.Controllers
                     FechaNacimiento = model.FechaNacimiento.Value,
                     Fechaderegistro = model.Fechaderegistro.Value,
                     Username = model.Username,
-                    SexoId = new Sexo() { SexoId = model.Sexo.SexoId },
+                    Sexo = new Sexo() { SexoId = model.Sexo.SexoId},
                     Administrador = false,
                     Eliminado = false,
                 };
@@ -101,7 +101,7 @@ namespace GameOverOnlinePresentation.Controllers
                 Fechaderegistro = user.Fechaderegistro,
                 Username = user.Username,
                 Eliminado = user.Eliminado,
-                SexoId = new Sexo() { SexoId = user.SexoId.Nombre , Nombre=user.Sexo.SexoId},
+                Sexo = new Sexo() { SexoId = user.Sexo.SexoId , Nombre= user.SexoId.Nombre},
                 
             };
             return View(usuario);
@@ -122,7 +122,7 @@ namespace GameOverOnlinePresentation.Controllers
                     Username = model.Username,
                     Eliminado = false,
                     FechaNacimiento = model.FechaNacimiento.Value,
-                    SexoId = new Sexo() { SexoId = model.Sexo.SexoId },
+                    Sexo = new Sexo() { SexoId = model.Sexo.SexoId },
                 };
                 UsuarioBrl.Actualizar(usuario);
                 return RedirectToAction("Index");
