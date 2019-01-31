@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Comun;
+using ClienteBrl;
 
 namespace GameOverOnlinePresentation.Controllers
 {
     public class UsuarioController : Controller
     {
+
+        /// <summary>
+        /// Controlador para el Usuario
+        /// </summary>
+        /// <
+
         // GET: Usuario
         public ActionResult Index()
         {
@@ -52,8 +60,18 @@ namespace GameOverOnlinePresentation.Controllers
                 // TODO: Add insert logic here
                 Usuario usuario = new Usuario()
                 {
-
-                }
+                    UsuarioId = 106,
+                    NombreCliente = model.NombreCliente,
+                    ApellidoCliente = model.ApellidoCliente,
+                    CorreoElectronico = model.CorreoElectronico,
+                    FechaNacimiento = model.FechaNacimiento.Value,
+                    Fechaderegistro = model.Fechaderegitro.Value,
+                    Username = model.Username,
+                    Sexo = new Sexo() { SexoId = model.Sexo.SexoId },
+                    Administrador = false,
+                    Eliminado = false,
+                };
+                UsuarioBrl.Insertar(usuario);
                 return RedirectToAction("Index");
             }
             catch
@@ -61,6 +79,11 @@ namespace GameOverOnlinePresentation.Controllers
                 return View();
             }
         }
+
+        
+
+
+
 
         // GET: Usuario/Edit/5
         public ActionResult Edit(int id)
@@ -74,8 +97,11 @@ namespace GameOverOnlinePresentation.Controllers
         {
             try
             {
-                // TODO: Add update logic here
+                
+                Usuario usuario = new Usuario()
+                {
 
+                }
                 return RedirectToAction("Index");
             }
             catch

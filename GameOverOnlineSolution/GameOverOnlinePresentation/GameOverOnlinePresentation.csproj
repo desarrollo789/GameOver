@@ -117,6 +117,20 @@
     <Folder Include="Views\Proveedor\" />
     <Folder Include="Views\Usuario\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClienteBrl\ClienteBrl.csproj">
+      <Project>{42f679bd-54b8-4b71-af76-ae20fd17211c}</Project>
+      <Name>ClienteBrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClienteDal\ClienteDal.csproj">
+      <Project>{f7539d65-c642-443e-93d3-c321bc0c3632}</Project>
+      <Name>ClienteDal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comun\Comun.csproj">
+      <Project>{5e7970e0-e3fb-4425-8d4c-7a7ef2711859}</Project>
+      <Name>Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
