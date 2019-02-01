@@ -1,0 +1,42 @@
+﻿@model GameOverOnlinePresentation.Models.ProveedorModel
+@{
+    ViewBag.Title = "Create";
+
+}
+<h2>@Resource.Resource.CreateUser</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NombreProveedor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NombreProveedor)
+            @Html.ValidationMessageFor(model => model.NombreProveedor)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ApellidoProveedor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ApellidoProveedor)
+            @Html.ValidationMessageFor(model => model.ApellidoProveedor)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CorreoElectronico)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CorreoElectronico)
+            @Html.ValidationMessageFor(model => model.CorreoElectronico)
+        </div>
+
+        <p>
+            <input type="submit" value=@Resource.Resource.Create />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Volver atras", "../KeyValueProveedorList/Index")
+</div>
