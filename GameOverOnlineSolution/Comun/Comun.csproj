@@ -47,13 +47,13 @@
     <Compile Include="Compra.cs" />
     <Compile Include="KeyValueUsuario.cs" />
     <Compile Include="KeyValueUsuarioList.cs" />
-    <Compile Include="PacienteList.cs" />
     <Compile Include="ProveedorList.cs" />
     <Compile Include="Ranking.cs" />
     <Compile Include="RankingList.cs" />
     <Compile Include="Sexo.cs" />
     <Compile Include="SexoList.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioList.cs" />
     <Compile Include="VentaDetalle.cs" />
     <Compile Include="Password.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

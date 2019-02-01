@@ -151,12 +151,13 @@ namespace ClienteDal
                         Portada = dr.GetString(3),
                         Trailer = dr.GetString(4),
                         Eliminado = dr.GetByte(5),
-                        Fecha = dr.GetDateTime(6),                                               
+                        Fecha = dr.GetDateTime(6),
                         ProveedorId = ProveedorDal.Get(dr.GetInt32(0)),
                         RankingId = RankingDal.Get(dr.GetInt32(0)),
                         CategoriaId = CategoriaDal.Get(dr.GetInt32(0)),
-                        ComentarioId = ComentarioDal.Get(dr.GetInt32(0))
-                        //ProveedorId = ProveedorDal.Get(dr.GetInt32(0)),           
+                        ComentarioId = ComentarioDal.Get(dr.GetInt32(0)),
+
+                        //ProveedorId = ProveedorDal.Get(dr.GetInt32(0)),
                     };
                 }
             }

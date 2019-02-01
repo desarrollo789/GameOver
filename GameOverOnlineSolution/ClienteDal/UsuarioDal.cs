@@ -151,7 +151,7 @@ namespace ClienteDal
                         Username = dr.GetString(5),
                         Administrador = dr.GetByte(6),
                         Eliminado = dr.GetByte(7),
-                        SexoId = SexoDal.Get(dr.GetByte(0)),
+                        SexoId = SexoDal.Get(dr.GetByte(id)),
                         Fechaderegistro = dr.GetDateTime(9)
                         
                     };

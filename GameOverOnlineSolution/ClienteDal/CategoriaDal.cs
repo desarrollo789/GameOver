@@ -5,7 +5,7 @@ using Comun;
 
 namespace ClienteDal
 {
-    class CategoriaDal
+    public class CategoriaDal
     {
         /// <summary>
         /// Metodo que sirve para insertar un categoria a la base de datos

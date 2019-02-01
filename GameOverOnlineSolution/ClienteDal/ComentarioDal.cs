@@ -134,7 +134,7 @@ namespace ClienteDal
                     {
                         ComentarioId = dr.GetInt32(0),
                         Comentariotext = dr.GetString(2),
-                        UsuarioId = UsuarioDal.Get(dr.GetInt32(0)),
+                        UsuarioId = UsuarioDal.Get(dr.GetInt32(id)),
                         Eliminado = dr.GetByte(3),
                         //ProveedorId = ProveedorDal.Get(dr.GetInt32(7)),                        
                     };

@@ -8,7 +8,7 @@ using Comun;
 
 namespace ClienteDal
 {
-    class CategoriaListDal
+    public class CategoriaListDal
     {
         public static CategoriaList Get()
         {

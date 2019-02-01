@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 namespace Comun
 {
     /// <summary>
-    /// Clase para manejar una lista de usuaro
+    /// Clase para manejar una lista de usuarios
     /// </summary>
     public class UsuarioList : List<Usuario>
     {
-                
-    }
 
+    }
 }

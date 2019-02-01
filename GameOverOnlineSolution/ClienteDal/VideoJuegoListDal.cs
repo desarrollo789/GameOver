@@ -32,15 +32,15 @@ namespace ClienteDal
                     {
                         VideoJuegoId = idVideoJuego,
                         Nombre = videojuego.Nombre,
-                        CategoriaId = videojuego.CategoriaId,
-                        Fecha = videojuego.Fecha,
                         Precio = videojuego.Precio,
+                        Portada = videojuego.Portada,
                         Trailer = videojuego.Trailer,
                         Eliminado = videojuego.Eliminado,
-                        ComentarioId = videojuego.ComentarioId,
-                        Portada = videojuego.Portada,
-                        RankingId = videojuego.RankingId,
-                        ProveedorId = videojuego.ProveedorId,
+                        Fecha = videojuego.Fecha,
+                        ProveedorId = ProveedorDal.Get(dr.GetInt32(0)),
+                        RankingId = RankingDal.Get(dr.GetInt32(0)),
+                        CategoriaId = CategoriaDal.Get(dr.GetInt32(0)),
+                        ComentarioId = ComentarioDal.Get(dr.GetInt32(0)),
                     });
                 }
             }

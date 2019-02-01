@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaBrl.cs" />
+    <Compile Include="CategoriaListBrl.cs" />
+    <Compile Include="ComentarioBrl.cs" />
+    <Compile Include="ComentarioListBrl.cs" />
     <Compile Include="KeyValueUsuarioListBrl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SexoListBrl.cs" />
     <Compile Include="UsuarioBrl.cs" />
+    <Compile Include="UsuarioLisBrl.cs" />
     <Compile Include="VideoJuegoBrl.cs" />
     <Compile Include="VideoJuegoListBrl.cs" />
   </ItemGroup>
