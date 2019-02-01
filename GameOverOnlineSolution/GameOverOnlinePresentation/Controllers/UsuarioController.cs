@@ -14,8 +14,7 @@ namespace GameOverOnlinePresentation.Controllers
 
         /// <summary>
         /// Controlador para el Usuario
-        /// </summary>
-        /// <
+        /// </summary>  
 
         // GET: Usuario
         public ActionResult Index()
