@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Delete";
+    Layout = null;
+}
+
+<h2>@Resource.Resource.DeleteProveedor</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            @Resource.Resource.MessageDelete
+        </div>
+        <p>
+            <input type="submit" value=@Resource.Resource.Delete />
+        </p>
+        <p>
+            @Html.ActionLink("Volver atras", "../KeyValueProveedorList/Index")
+        </p>
+    </fieldset>
+}

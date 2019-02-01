@@ -94,12 +94,30 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Resource.Designer.cs" />
+    <Compile Include="App_GlobalResources\Resource.es.designer.cs" />
+    <Compile Include="App_GlobalResources\Resource.es1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\KeyValueUsuarioListController.cs" />
     <Compile Include="Controllers\ProveedorController.cs" />
+    <Compile Include="Controllers\SexoListController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\VideoJuegoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoriaModel.cs" />
+    <Compile Include="Models\ComentarioModel.cs" />
+    <Compile Include="Models\CompraModel.cs" />
     <Compile Include="Models\KeyValueProveedorListModel.cs" />
     <Compile Include="Models\KeyValueProveedorModel.cs" />
     <Compile Include="Models\KeyValueUsuarioListModel.cs" />
@@ -107,12 +125,18 @@
     <Compile Include="Models\ProveedorModel.cs" />
     <Compile Include="Models\SexoModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
+    <Compile Include="Models\VentaDetalleModel.cs" />
     <Compile Include="Models\VentaModel.cs" />
+    <Compile Include="Models\VideoJuegoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\Proveedor\Crear.cshtml" />
+    <Content Include="Views\Proveedor\Editar.cshtml" />
+    <Content Include="Views\Proveedor\Eliminar.cshtml" />
+    <Content Include="Views\Proveedor\Ver.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -122,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Proveedor\" />
     <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +161,16 @@
       <Project>{5e7970e0-e3fb-4425-8d4c-7a7ef2711859}</Project>
       <Name>Comun</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.es.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.es1.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource1.designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
